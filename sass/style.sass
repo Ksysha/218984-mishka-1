@@ -1,0 +1,340 @@
+$tablet-widths: 768px
+$desktop-widths: 1150px
+$bcg-light-grey: #fbfbfb
+$outline-light-grey: #ececec
+$text-grey: #444444
+$tiffany: #63d1bb
+
+body
+  font-size: 17px
+  line-height: 24px
+  font-family: Open Sans, sans-serif
+  color: #444444
+  font-style: normal
+  min-width: 320px
+
+img
+  max-width: 100%
+  height: auto
+
+@mixin container()
+  width: auto //320px
+  margin: 0 auto
+  padding-left: 30px
+  padding-right: 30px
+
+  @media (min-width: $tablet-widths)
+    width: auto // 668px
+    padding-left: 50px
+    padding-right: 50px
+  @media (min-width: $desktop-widths)
+    width: 1050px
+    padding-left: 50px
+    padding-right: 50px
+    margin: 0 auto
+
+@mixin no-outline()
+  outline: none
+  background: transparent
+
+  &::before
+    display: none
+
+@mixin clearfix()
+  &::after
+    content: ""
+
+    display: table
+    clear: both
+
+
+.visually-hidden
+  position: absolute
+  overflow: hidden
+  clip: rect(0 0 0 0)
+  height: 1px
+  width: 1px
+  margin: -1px
+  padding: 0
+  border: 0
+
+.page-header
+  background-color: $bcg-light-grey
+  min-height: 568px
+  &__logo
+    display: inline-block
+    height: 79px
+    text-align: center
+    width: 100%
+    border-bottom: 1px solid $outline-light-grey
+  &__title
+    font-size: 27px
+    line-height: 30px
+    color: black
+    margin: 0
+    text-align: center
+    margin-bottom: 122px
+    margin: 0 auto
+    width: 245px
+  &__top-menu
+    background-color: white
+    margin-bottom: 70px
+  &__bottom-menu
+    @include container()
+  &__product-groups
+    list-style-type: none
+    margin: 0
+    padding: 0
+  &__product-group
+    @include container()
+    padding-top: 26px
+    padding-bottom: 28px
+    &--group1
+      background-color: $tiffany
+    &--group2
+      background-color: #56c3b2
+    a
+      box-sizing: border-box
+      display: inline-block
+      color: white
+      font-weight: bold
+      text-decoration: none
+      font-size: 19px
+      width: 130px
+
+.main-nav
+  width: auto
+  margin: 0 auto
+  //@include container()
+  &__wrapper
+    position: relative
+    display: flex
+    flex-wrap: wrap
+  &__toggle
+    position: absolute
+    top: 0
+    right: 0
+    button
+      border: none
+      padding: 0
+      margin: 0
+  li:not(.page-header__logo):not(.main-nav__toggle)
+    //display: none
+  li:not(.main-nav__toggle)
+    border-bottom: 1px solid $outline-light-grey
+  &__lists
+    //position: relative
+  &__lists,
+  &__user-lists
+    width: 100%
+    list-style-type: none
+    margin: 0
+    padding: 0
+  &__item,
+  &__user-item
+    width: 100%
+    a
+      box-sizing: border-box
+      display: inline-block
+      color: black
+      font-weight: bold
+      text-decoration: none
+      padding-left: 75px
+      padding-top: 27px
+      padding-bottom: 27px
+      //border-bottom: 1px solid $outline-light-grey
+      width: 100%
+  // &__user-basket
+  //   border-bottom: 1px solid $outline-light-grey
+
+.search-form
+  //border-top: 1px solid $outline-light-grey
+  width: 100%
+  // padding-left: 75px
+  // padding-top: 27px
+  // padding-bottom: 27px
+  ::-webkit-input-placeholder
+    color: black
+    font-weight: bold
+  input
+    border: none
+    padding-left: 75px
+    padding-top: 27px
+    padding-bottom: 27px
+    padding-right: 58px
+    &:focus
+      outline: none
+
+.second-nav
+  &__lists
+    display: none
+  &__link
+    display: none
+
+.promo-goods
+  &__wrapper
+    @include container()
+  &__title
+    margin: 0
+    font-size: 25px
+    line-height: 30px
+    color: black
+    margin-top: 27px
+    margin-bottom: 3px
+  &__badge
+    color: $tiffany
+    text-transform: uppercase
+    font-weight: bold
+    line-height: 16px
+    display: inline-block
+    margin-bottom: 10px
+  &__desc
+    font-size: 15px
+    padding-bottom: 7px
+
+.goods-stats
+  margin-left: -2px
+  tr
+
+  &__field
+    padding: 0
+
+
+@media (min-width: $tablet-widths)
+  .page-header
+    &__top-menu
+      //@include container()
+      height: 88px
+      border-bottom: 1px solid $outline-light-grey
+    &__wrapper
+      height: 715px
+    // &__bottom-menu
+    //   padding-top: 153px
+    //   @include container()
+    //   height: 700px
+    //   box-sizing: border-box
+    //   position: relative
+    &__logo
+      padding-top: 23px
+      padding-bottom: 21px
+      box-sizing: border-box
+      width: 113px
+      height: 88px
+      border: none
+    &__title
+      padding-top: 153px
+      @include container()
+      font-size: 43px
+      line-height: 50px
+    &__product-groups
+      @include container()
+    &__product-group
+      display: inline-block
+      width: 50%
+      padding-left: 35px
+      padding-top: 28px
+      padding-bottom: 29px
+      box-sizing: border-box
+      a
+        font-size: 20px
+        line-height: 30px
+      &--group2
+        margin-left: -5px
+
+  .main-nav
+    @include container()
+    width: auto
+    min-height: 70px
+    margin: 0
+    &__toggle
+      display: none
+    &__lists
+      width: auto
+      order: 2
+      margin-top: 16px
+      a
+        padding: 0
+        font-size: 15px
+    &__user-lists
+      width: auto
+      flex-grow: 1
+      text-align: right
+      padding-top: 33px
+      padding-bottom: 33px
+      a
+        padding: 0
+    &__item
+      width: auto
+      &:not(:last-of-type)
+        margin-right: 31px
+    &__user-item
+      width: auto
+    li:not(.main-nav__toggle)
+      border-bottom: none
+      display: inline-block
+
+  .search-form
+    input
+      padding: 0
+
+  .second-nav
+    &__link
+      display: inline-block
+      float: right
+      margin-top: -24px
+      font-size: 15px
+      text-decoration: none
+      color: $text-grey
+
+@media (min-width: $desktop-widths)
+  .page-header
+    &__logo
+      order: 1
+      position: absolute
+      right: 50%
+      transform: translateX(50%)
+    &__title
+      font-size: 53px
+      line-height: 57px
+      padding-top: 83px
+      width: 700px
+  .main-nav
+    &__lists
+      order: 0
+      margin: 0
+      font-size: 17px
+    &__user-lists
+      order: 3
+      padding-top: 31px
+    &__item
+      padding-top: 31px
+      padding-bottom: 33px
+      padding-right: 35px
+      a
+        letter-spacing: 1.2px
+      &:not(:last-of-type)
+        margin-right: 30px
+        border-right: 1px solid $outline-light-grey
+  .second-nav
+    @include container()
+    display: block
+    &__lists
+      display: inline-block
+      list-style-type: none
+      margin: 0
+      padding: 0
+      margin-top: 18px
+    &__item
+      display: inline-block
+      a
+        box-sizing: border-box
+        display: inline-block
+        color: black
+        font-weight: bold
+        text-decoration: none
+        font-size: 15px
+      &:not(:last-of-type)
+        margin-right: 57px
+    &__link
+      margin: 0
+      margin-top: 18px
