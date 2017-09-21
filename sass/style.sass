@@ -12,6 +12,8 @@ body
   color: #444444
   font-style: normal
   min-width: 320px
+  margin: 0
+  padding: 0
 
 img
   max-width: 100%
@@ -59,8 +61,9 @@ img
   border: 0
 
 .page-header
-  background-color: $bcg-light-grey
   min-height: 568px
+  &__container
+    @include container()
   &__logo
     display: inline-block
     height: 79px
@@ -73,20 +76,19 @@ img
     color: black
     margin: 0
     text-align: center
-    margin-bottom: 122px
     margin: 0 auto
-    width: 245px
-  &__top-menu
+    padding-bottom: 125px
+  &__top
     background-color: white
-    margin-bottom: 70px
-  &__bottom-menu
-    @include container()
+  &__bottom
+    padding-top: 75px
+    background-color: $bcg-light-grey
   &__product-groups
     list-style-type: none
     margin: 0
     padding: 0
   &__product-group
-    @include container()
+    padding-left: 30px
     padding-top: 26px
     padding-bottom: 28px
     &--group1
@@ -103,9 +105,6 @@ img
       width: 130px
 
 .main-nav
-  width: auto
-  margin: 0 auto
-  //@include container()
   &__wrapper
     position: relative
     display: flex
@@ -142,28 +141,11 @@ img
       padding-left: 75px
       padding-top: 27px
       padding-bottom: 27px
-      //border-bottom: 1px solid $outline-light-grey
       width: 100%
-  // &__user-basket
-  //   border-bottom: 1px solid $outline-light-grey
-
-.search-form
-  //border-top: 1px solid $outline-light-grey
-  width: 100%
-  // padding-left: 75px
-  // padding-top: 27px
-  // padding-bottom: 27px
-  ::-webkit-input-placeholder
-    color: black
-    font-weight: bold
-  input
-    border: none
-    padding-left: 75px
-    padding-top: 27px
-    padding-bottom: 27px
-    padding-right: 58px
-    &:focus
-      outline: none
+  &__search
+    a
+      color: black
+      font-weight: bold
 
 .second-nav
   &__lists
@@ -172,7 +154,7 @@ img
     display: none
 
 .promo-goods
-  &__wrapper
+  &__container
     @include container()
   &__title
     margin: 0
@@ -199,16 +181,58 @@ img
   &__field
     padding: 0
 
+.advantages
+  &__container
+    @include container()
+  &__title
+    margin: 0
+    padding: 0
+  &__lists
+    list-style-type: none
+    margin: 0
+    padding: 0
+
+.reviews
+  &__container
+    @include container()
+
+.contacts
+  &__container
+    @include container()
+
+.page-footer
+  &__container
+    @include container()
+
+.page-main
+  &__container
+    @include container()
+
+.catalog
+  margin-top: 30px
+  &__modal
+    display: none
+
+.product
+  &__information
+    padding-top: 30px
+    padding-left: 27px
+    padding-right: 27px
+  &__title
+    margin: 0
+  &__price
+    display: inline-block
+
+.order-form
+  &__container
+    @include container()
 
 @media (min-width: $tablet-widths)
   .page-header
-    &__top-menu
-      //@include container()
+    &__top
       height: 88px
       border-bottom: 1px solid $outline-light-grey
-    &__wrapper
-      height: 715px
-    // &__bottom-menu
+    // &__bottom
     //   padding-top: 153px
     //   @include container()
     //   height: 700px
@@ -272,9 +296,7 @@ img
     li:not(.main-nav__toggle)
       border-bottom: none
       display: inline-block
-
-  .search-form
-    input
+    &__search
       padding: 0
 
   .second-nav
