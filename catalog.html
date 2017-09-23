@@ -10,43 +10,31 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__top">
-        <div class="page-header__container">
-          <nav class="main-nav  main-nav--closed">
-            <div class="main-nav__wrapper">
-              <div class="page-header__logo">
-                <img src="http://placehold.it/86x35" alt="лого-хэдер">
-              </div>
-              <button type="button" class="main-nav__toggle">Открыть меню</button>
-              <div class="page-header__nav">
-                <ul class="main-nav__lists">
-                  <li class="main-nav__item  main-nav__catalog"><a href="catalog.html">Каталог товаров</a></li>
-                  <li class="main-nav__item  main-nav__order"><a href="#">Вязание на заказ</a></li>
-                </ul>
-                <ul class="main-nav__user-lists">
-                  <li class="main-nav__user-item  main-nav__search"><a href="#">Поиск по сайту</a></li>
-                  <li class="main-nav__user-item  main-nav__basket  main-nav__basket--empty"><a href="#">Корзина: пока пуста</a></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-          <nav class="second-nav">
-            <ul class="second-nav__lists">
-              <li class="second-nav__item"><a href="#">Новые поступления</a></li>
-              <li class="second-nav__item"><a href="#">Распродажа</a></li>
-            </ul>
-            <a href="#" class="second-nav__link">Бесплатная доставка по России</a>
-          </nav>
+      <nav class="main-nav">
+        <button type="button" class="main-nav__toggle">Открыть меню</button>
+        <div class="page-header__logo">
+          <img src="http://placehold.it/86x35" alt="лого-хэдер">
         </div>
-      </div>
-      <div class="page-header__bottom">
-        <div class="page-header__container">
-          <h1 class="page-header__title">Каталог товаров</h1>
-        </div>
-      </div>
+        <ul class="main-nav__lists  main-nav--closed">
+          <li class="main-nav__item  main-nav__catalog"><a href="catalog.html">Каталог товаров</a></li>
+          <li class="main-nav__item  main-nav__order"><a href="#">Вязание на заказ</a></li>
+        </ul>
+        <ul class="main-nav__user-lists  main-nav--closed">
+          <li class="main-nav__user-item  main-nav__search"><a href="#">Поиск по сайту</a></li>
+          <li class="main-nav__user-item  main-nav__basket  main-nav__basket--empty"><a href="#">Корзина: пока пуста</a></li>
+        </ul>
+        <ul class="main-nav__promo-lists">
+          <li class="main-nav__promo-item"><a href="#">Новые поступления</a></li>
+          <li class="main-nav__promo-item"><a href="#">Распродажа</a></li>
+        </ul>
+        <a href="#" class="main-nav__link">Бесплатная доставка по России</a>
+      </nav>
     </header>
     <main class="page-main">
       <div class="page-main__container">
+        <div class="page-main__headline">
+          <h1 class="page-main__title">Каталог товаров</h1>
+        </div>
         <section class="catalog">
           <article class="catalog__item  product">
             <img src="http://placehold.it/260x195" width="260" height="195" alt="фото товара">
@@ -145,5 +133,6 @@
         </p>
       </div>
     </footer>
+    <script src="js/main.js" charset="utf-8"></script>
   </body>
 </html>
