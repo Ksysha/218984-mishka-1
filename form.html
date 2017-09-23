@@ -15,7 +15,7 @@
           <nav class="main-nav  main-nav--closed">
             <div class="main-nav__wrapper">
               <div class="page-header__logo">
-                <img src="http://placehold.it/86x35">
+                <img src="http://placehold.it/86x35" alt="лого-хэдер">
               </div>
               <button type="button" class="main-nav__toggle">Открыть меню</button>
               <div class="page-header__nav">
@@ -39,7 +39,6 @@
           </nav>
         </div>
       </div>
-      </div>
       <div class="page-header__bottom">
         <div class="page-header__container">
           <h1 class="page-header__title">Вязание на заказ</h1>
@@ -52,14 +51,12 @@
           <p class="order-form__introduction">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
           <div class="order-form__field">
             <span class="order-form__field-title">Тип</span>
-            <label>
+            <label class="order-form__label-radio">
               <input type="radio" name="type" class="order-form__radio" value="0">
-              <span class="order-form__indicator-radio"></span>
               Аксессуар для интерьера
             </label>
-            <label>
+            <label class="order-form__label-radio">
               <input type="radio" name="type" class="order-form__radio" value="1" checked>
-              <span class="order-form__indicator-radio"></span>
               Детская игрушка
             </label>
           </div>
@@ -67,34 +64,28 @@
         <div class="order-form__field  order-form__field--grey">
           <div class="order-form__container">
             <p class="order-form__field-title">Цвет</p>
-            <label>
+            <label class="order-form__label-checkbox">
               <input type="checkbox" name="colour-white" value="white" class="order-form__checkbox" checked>
-              <span class="order-form__indicator-checkbox"></span>
               Белый
             </label>
-            <label>
+            <label class="order-form__label-checkbox">
               <input type="checkbox" name="colour-grey" value="grey" class="order-form__checkbox" checked>
-              <span class="order-form__indicator-checkbox"></span>
               Серый
             </label>
-            <label>
+            <label class="order-form__label-checkbox">
               <input type="checkbox" name="colour-blue" value="blue" class="order-form__checkbox">
-              <span class="order-form__indicator-checkbox"></span>
               «Тиффани»
             </label>
-            <label>
+            <label class="order-form__label-checkbox">
               <input type="checkbox" name="colour-black" value="black" class="order-form__checkbox">
-              <span class="order-form__indicator-checkbox"></span>
               Черный
             </label>
-            <label>
+            <label class="order-form__label-checkbox">
               <input type="checkbox" name="colour-pink" value="pink" class="order-form__checkbox">
-              <span class="order-form__indicator-checkbox"></span>
               Розовый
             </label>
-            <label>
+            <label class="order-form__label-checkbox">
               <input type="checkbox" name="colour-orange" value="orange" class="order-form__checkbox">
-              <span class="order-form__indicator-checkbox"></span>
               Оранжевый
             </label>
           </div>
@@ -103,13 +94,13 @@
           <div class="order-form__field">
             <p class="order-form__field-title">ФИО</p>
             <label for="user-name">Имя:</label>
-            <input type="text" name="user-name" value="user-name" placeholder="Введите ваше имя">
+            <input type="text" name="user-name" id="user-name" value="user-name" placeholder="Введите ваше имя">
 
             <label for="user-surname">Фамилия:</label>
-            <input type="text" name="user-surname" value="user-surname" placeholder="Укажите фамилию">
+            <input type="text" name="user-surname" id="user-surname" value="user-surname" placeholder="Укажите фамилию">
 
             <label for="user-patronymic">Отчество:</label>
-            <input type="text" name="user-patronymic" value="user-patronymic" placeholder="Отчество, если желаете">
+            <input type="text" name="user-patronymic" id="user-patronymic" value="user-patronymic" placeholder="Отчество, если желаете">
           </div>
         </div>
         <div class="order-form__field  order-form__field--grey">
