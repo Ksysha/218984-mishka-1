@@ -1,5 +1,21 @@
 $tablet-widths: 768px
 $desktop-widths: 1150px
+
+/* ------- цветовая палитра ------ */
+$brand-colors: ('primary': #63d1bb, 'secondary': #444444, 'background-primary': #f9f9f9, 'background-secondary': #f1f1f1, 'decorative-line': #ececec)
+$text-colors: ('text-dark': #000000, 'text-light': #ffffff, 'content-text': #444444)
+
+@function mishka-color($key: 'primary', $palette: $brand-colors)
+  @return map-get($palette, $key)
+
+@function mishka-color-hover($color-name: 'primary')
+  $color: mishka-color($color-name)
+  @return rgba($color, 0.6)
+
+@function mishka-color-down($color-name: 'primary')
+  $color: mishka-color($color-name)
+  @return rgba($color, 0.3)
+
 $bcg-light-grey: #fbfbfb
 $outline-light-grey: #ececec
 $text-grey: #444444
@@ -60,18 +76,34 @@ img
   padding: 0
   border: 0
 
+/* ------ блок кнопка btn ------*/
+.btn
+  font-size: 17px
+  line-height: 16px
+  text-transform: uppercase
+  color: mishka-color('content-text', $text-colors)
+  border: 2px solid mishka-color('content-text', $text-colors)
+  background-color: transparent
+  box-sizing: border-box
+  padding-bottom: 16px
+  padding-top: 16px
+  font-weight: bold
+  display: block
+
+/* ------ блок page-header ------*/
 .page-header
   height: 78px
   position: relative
   background-color: white
   &__logo
     width: 100%
-    border-bottom: 1px solid $outline-light-grey
+    border-bottom: 1px solid mishka-color('decorative-line')
     min-height: 79px
     display: flex
     justify-content: center
     align-items: center
 
+/* ------ блок main-nav ------*/
 .main-nav
   position: relative
   display: flex
@@ -121,6 +153,7 @@ img
   &__link
     display: none
 
+/* ------ блок promo-goods ------*/
 .promo-goods
   &__container
     @include container()
@@ -149,15 +182,44 @@ img
     padding-bottom: 7px
     margin: 0
     padding: 0
-    margin-bottom: 22px
+    margin-bottom: 27px
+  &__img
+    margin: 0 auto
+    display: block
+    margin-bottom: 24px
+  &__price
+    color: mishka-color('content-text', $text-colors)
+    display: block
+    text-align: center
+    margin-bottom: 26px
+  &__order
+    padding-right: 80px
+    padding-left: 80px
+    display: block
+    margin: 0 auto
 
+/* ------ блок goods-stats ------*/
 .goods-stats
   margin-left: -2px
-  tr
-
+  margin-bottom: 28px
   &__field
+    border-bottom: 1px solid mishka-color('decorative-line')
+    width: 100%
+    display: flex
+    justify-content: space-between
+    margin-bottom: 9px
+    padding-bottom: 6px
+  &__property
     padding: 0
+    display: inline-block
+    font-size: 15px
+    line-height: 20px
+  &__value
+    display: inline-block
+    width: 63%
+    letter-spacing: -1px
 
+/* ------ блок advantages ------*/
 .advantages
   &__container
     @include container()
@@ -169,18 +231,22 @@ img
     margin: 0
     padding: 0
 
+/* ------ блок reviews------*/
 .reviews
   &__container
     @include container()
 
+/* ------ блок contacts ------*/
 .contacts
   &__container
     @include container()
 
+/* ------ блок page-footer ------*/
 .page-footer
   &__container
     @include container()
 
+/* ------ блок page-main ------*/
 .page-main
   &__headline
     padding-top: 72px
@@ -206,7 +272,7 @@ img
     &--group1
       background-color: $tiffany
     &--group2
-      background-color: #56c3b2
+      background-color: mix(black, $tiffany, 7%) //#56c3b2
     a
       box-sizing: border-box
       display: inline-block
@@ -216,11 +282,13 @@ img
       font-size: 19px
       width: 130px
 
+/* ------ блок catalog ------*/
 .catalog
   margin-top: 30px
   &__modal
     display: none
 
+/* ------ блок product ------*/
 .product
   &__information
     padding-top: 30px
@@ -231,6 +299,7 @@ img
   &__price
     display: inline-block
 
+/* ------ блок order-form ------*/
 .order-form
   &__container
     @include container()
