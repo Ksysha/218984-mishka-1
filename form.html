@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>HTML Academy: Мишка</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="main-nav">
+        <button type="button" class="main-nav__toggle">Открыть меню</button>
+        <div class="page-header__logo">
+          <img src="http://placehold.it/86x35" alt="лого-хэдер">
+        </div>
+        <ul class="main-nav__lists  main-nav--closed">
+          <li class="main-nav__item  main-nav__catalog"><a href="catalog.html">Каталог товаров</a></li>
+          <li class="main-nav__item  main-nav__order"><a href="#">Вязание на заказ</a></li>
+        </ul>
+        <ul class="main-nav__user-lists  main-nav--closed">
+          <li class="main-nav__user-item  main-nav__search"><a href="#">Поиск по сайту</a></li>
+          <li class="main-nav__user-item  main-nav__basket  main-nav__basket--empty"><a href="#">Корзина: пока пуста</a></li>
+        </ul>
+        <ul class="main-nav__promo-lists">
+          <li class="main-nav__promo-item"><a href="#">Новые поступления</a></li>
+          <li class="main-nav__promo-item"><a href="#">Распродажа</a></li>
+        </ul>
+        <a href="#" class="main-nav__link">Бесплатная доставка по России</a>
+      </nav>
+    </header>
+    <main>
+      <div class="page-main__headline">
+        <h1 class="page-main__title">Вязание на заказ</h1>
+      </div>
+      <form class="order-form" method="post" action="search.html">
+        <div class="order-form__container">
+          <p class="order-form__introduction">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+          <div class="order-form__field">
+            <span class="order-form__field-title">Тип</span>
+            <label class="order-form__label-radio">
+              <input type="radio" name="type" class="order-form__radio" value="0">
+              Аксессуар для интерьера
+            </label>
+            <label class="order-form__label-radio">
+              <input type="radio" name="type" class="order-form__radio" value="1" checked>
+              Детская игрушка
+            </label>
+          </div>
+        </div>
+        <div class="order-form__field  order-form__field--grey">
+          <div class="order-form__container">
+            <p class="order-form__field-title">Цвет</p>
+            <label class="order-form__label-checkbox">
+              <input type="checkbox" name="colour-white" value="white" class="order-form__checkbox" checked>
+              Белый
+            </label>
+            <label class="order-form__label-checkbox">
+              <input type="checkbox" name="colour-grey" value="grey" class="order-form__checkbox" checked>
+              Серый
+            </label>
+            <label class="order-form__label-checkbox">
+              <input type="checkbox" name="colour-blue" value="blue" class="order-form__checkbox">
+              «Тиффани»
+            </label>
+            <label class="order-form__label-checkbox">
+              <input type="checkbox" name="colour-black" value="black" class="order-form__checkbox">
+              Черный
+            </label>
+            <label class="order-form__label-checkbox">
+              <input type="checkbox" name="colour-pink" value="pink" class="order-form__checkbox">
+              Розовый
+            </label>
+            <label class="order-form__label-checkbox">
+              <input type="checkbox" name="colour-orange" value="orange" class="order-form__checkbox">
+              Оранжевый
+            </label>
+          </div>
+        </div>
+        <div class="order-form__container">
+          <div class="order-form__field">
+            <p class="order-form__field-title">ФИО</p>
+            <label for="user-name">Имя:</label>
+            <input type="text" name="user-name" id="user-name" value="user-name" placeholder="Введите ваше имя">
+
+            <label for="user-surname">Фамилия:</label>
+            <input type="text" name="user-surname" id="user-surname" value="user-surname" placeholder="Укажите фамилию">
+
+            <label for="user-patronymic">Отчество:</label>
+            <input type="text" name="user-patronymic" id="user-patronymic" value="user-patronymic" placeholder="Отчество, если желаете">
+          </div>
+        </div>
+        <div class="order-form__field  order-form__field--grey">
+          <div class="order-form__container">
+            <p class="order-form__field-title">Тел</p>
+            <input type="tel" name="user-phone" placeholder="+7 XXX XX XX">
+            <p class="order-form__field-title">e-mail</p>
+            <input type="text" name="user-email" placeholder="Ваш Email">
+          </div>
+        </div>
+        <div class="order-form__container">
+          <div class="order-form__field">
+            <p class="order-form__field-title">Доп</p>
+            <textarea name="user-message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </div>
+          <p class="order-form__postscript">Все поля обязательны для заполнения</p>
+          <button type="submit" class="order-form__submit  btn">Отправить заказ</button>
+        </div>
+      </form>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__container">
+        <div class="page-footer__logo">
+          <img src="http://placehold.it/102x34" alt="лого футер">
+        </div>
+        <div class="page-footer__social">
+          <ul class="social-links">
+            <li>
+              <a href="#" class="social-link  social-link--inst">Инстаграмм</a>
+            </li>
+            <li>
+              <a href="#" class="social-link  social-link--fb">Фэйсбук</a>
+            </li>
+            <li>
+              <a href="#" class="social-link  social-link--tvit">Твиттер</a>
+            </li>
+          </ul>
+        </div>
+        <p class="page-footer__copyright">
+          Разработано
+          <a href="https://htmlacademy.ru" class="page-footer__copyright-link">
+            <img src="http://placehold.it/27x34" alt="лого HTML academy">
+          </a>
+        </p>
+      </div>
+    </footer>
+    <script src="js/main.js" charset="utf-8"></script>
+  </body>
+</html>

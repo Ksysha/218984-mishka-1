@@ -1,0 +1,393 @@
+$tablet-widths: 768px
+$desktop-widths: 1150px
+$bcg-light-grey: #fbfbfb
+$outline-light-grey: #ececec
+$text-grey: #444444
+$tiffany: #63d1bb
+
+body
+  font-size: 17px
+  line-height: 24px
+  font-family: Open Sans, sans-serif
+  color: #444444
+  font-style: normal
+  min-width: 320px
+  margin: 0
+  padding: 0
+
+img
+  max-width: 100%
+  height: auto
+
+@mixin container()
+  width: auto //320px
+  margin: 0 auto
+  padding-left: 30px
+  padding-right: 30px
+
+  @media (min-width: $tablet-widths)
+    width: auto // 668px
+    padding-left: 50px
+    padding-right: 50px
+  @media (min-width: $desktop-widths)
+    width: 1050px
+    padding-left: 50px
+    padding-right: 50px
+    margin: 0 auto
+
+@mixin no-outline()
+  outline: none
+  background: transparent
+
+  &::before
+    display: none
+
+@mixin clearfix()
+  &::after
+    content: ""
+
+    display: table
+    clear: both
+
+
+.visually-hidden
+  position: absolute
+  overflow: hidden
+  clip: rect(0 0 0 0)
+  height: 1px
+  width: 1px
+  margin: -1px
+  padding: 0
+  border: 0
+
+/* ------ блок page-header ------*/
+.page-header
+  height: 78px
+  position: relative
+  background-color: white
+  &__logo
+    width: 100%
+    border-bottom: 1px solid $outline-light-grey
+    min-height: 79px
+    display: flex
+    justify-content: center
+    align-items: center
+
+/* ------ блок main-nav ------*/
+.main-nav
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  background-color: white
+  &--closed
+    display: none
+  &__toggle
+    cursor: pointer
+    position: absolute
+    top: 0
+    right: 0
+    button
+      border: none
+      padding: 0
+      margin: 0
+      &:focus
+        outline: none
+  li:not(.main-nav__toggle)
+    border-bottom: 1px solid $outline-light-grey
+  &__lists,
+  &__user-lists
+    width: 100%
+    list-style-type: none
+    margin: 0
+    padding: 0
+  &__item,
+  &__user-item
+    width: 100%
+    a
+      box-sizing: border-box
+      display: inline-block
+      color: black
+      font-weight: bold
+      text-decoration: none
+      padding-left: 75px
+      padding-top: 27px
+      padding-bottom: 27px
+      width: 100%
+  &__search
+    a
+      color: black
+      font-weight: bold
+  &__promo-lists
+    display: none
+  &__link
+    display: none
+
+/* ------ блок promo-goods ------*/
+.promo-goods
+  &__container
+    @include container()
+  &__header
+    margin-top: 27px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-bottom: 25px
+  &__title
+    margin: 0
+    font-size: 25px
+    line-height: 30px
+    color: black
+    margin-bottom: 7px
+    display: inline-block
+    width: 100%
+  &__badge
+    color: $tiffany
+    text-transform: uppercase
+    font-weight: bold
+    line-height: 16px
+    display: inline-block
+  &__desc
+    font-size: 15px
+    padding-bottom: 7px
+    margin: 0
+    padding: 0
+    margin-bottom: 22px
+
+/* ------ блок goods-stats ------*/
+.goods-stats
+  margin-left: -2px
+  tr
+
+  &__field
+    padding: 0
+
+/* ------ блок advantages ------*/
+.advantages
+  &__container
+    @include container()
+  &__title
+    margin: 0
+    padding: 0
+  &__lists
+    list-style-type: none
+    margin: 0
+    padding: 0
+
+/* ------ блок reviews------*/
+.reviews
+  &__container
+    @include container()
+
+/* ------ блок contacts ------*/
+.contacts
+  &__container
+    @include container()
+
+/* ------ блок page-footer ------*/
+.page-footer
+  &__container
+    @include container()
+
+/* ------ блок page-main ------*/
+.page-main
+  &__headline
+    padding-top: 72px
+    background-color: $bcg-light-grey
+  &__title
+    @include container()
+    font-size: 27px
+    line-height: 30px
+    color: black
+    margin: 0
+    text-align: center
+    margin: 0 auto
+    padding-bottom: 122px
+    width: 81.25%
+  &__product-groups
+    list-style-type: none
+    margin: 0
+    padding: 0
+  &__product-group
+    padding-left: 30px
+    padding-top: 26px
+    padding-bottom: 28px
+    &--group1
+      background-color: $tiffany
+    &--group2
+      background-color: #56c3b2
+    a
+      box-sizing: border-box
+      display: inline-block
+      color: white
+      font-weight: bold
+      text-decoration: none
+      font-size: 19px
+      width: 130px
+
+/* ------ блок catalog ------*/
+.catalog
+  margin-top: 30px
+  &__modal
+    display: none
+
+/* ------ блок product ------*/
+.product
+  &__information
+    padding-top: 30px
+    padding-left: 27px
+    padding-right: 27px
+  &__title
+    margin: 0
+  &__price
+    display: inline-block
+
+/* ------ блок order-form ------*/
+.order-form
+  &__container
+    @include container()
+
+@media (min-width: $tablet-widths)
+  .page-header
+    height: 88px
+    border-bottom: 1px solid $outline-light-grey
+    &__logo
+      padding-top: 23px
+      padding-bottom: 21px
+      box-sizing: border-box
+      width: 113px
+      height: 88px
+      border: none
+
+  .main-nav
+    @include container()
+    width: auto
+    margin: 0
+    background-color: transparent
+    &__toggle
+      display: none
+    &__lists
+      display: inline-block
+      width: 49%
+      order: 2
+      margin-top: 16px
+      a
+        padding: 0
+        font-size: 15px
+    &__user-lists
+      display: inline-block
+      width: 52%
+      text-align: right
+      padding-top: 33px
+      padding-bottom: 33px
+      a
+        padding: 0
+    &__item
+      width: auto
+      &:not(:last-of-type)
+        margin-right: 31px
+    &__user-item
+      width: auto
+    li:not(.main-nav__toggle)
+      border-bottom: none
+      display: inline-block
+    &__search
+      padding: 0
+    &__link
+      font-size: 15px
+      text-decoration: none
+      color: $text-grey
+
+  .page-main
+    &__title
+      padding-top: 81px
+      padding-bottom: 373px
+      @include container()
+      font-size: 43px
+      line-height: 50px
+    &__product-groups
+      @include container()
+    &__product-group
+      display: inline-block
+      width: 50%
+      padding-left: 35px
+      padding-top: 28px
+      padding-bottom: 29px
+      box-sizing: border-box
+      a
+        font-size: 20px
+        line-height: 30px
+      &--group2
+        margin-left: -5px
+
+  .promo-goods
+    &__header
+      margin-left: -3px
+      margin-top: 47px
+      margin-bottom: 45px
+    &__title
+      font-size: 43px
+      line-height: 50px
+      font-weight: bold
+      width: auto
+    &__badge
+      padding-top: 12px
+      padding-right: 23px
+      text-align: center
+      width: 80px
+
+
+@media (min-width: $desktop-widths)
+  .page-header
+    &__logo
+      order: 1
+  .main-nav
+    background-color: transparent
+    &__lists
+      order: 0
+      margin: 0
+      font-size: 17px
+      display: inline-block
+      width: auto
+    &__user-lists
+      order: 3
+      padding-top: 31px
+      display: inline-block
+      width: auto
+    &__item
+      padding-top: 31px
+      padding-bottom: 33px
+      padding-right: 35px
+      a
+        letter-spacing: 1.2px
+      &:not(:last-of-type)
+        margin-right: 30px
+        border-right: 1px solid $outline-light-grey
+    &__promo-lists
+      display: inline-block
+      list-style-type: none
+      margin: 0
+      padding: 0
+      margin-top: 18px
+      order: 3
+    &__promo-item
+      display: inline-block
+      a
+        box-sizing: border-box
+        display: inline-block
+        color: black
+        font-weight: bold
+        text-decoration: none
+        font-size: 15px
+      &:not(:last-of-type)
+        margin-right: 57px
+    &__link
+      margin: 0
+      margin-top: 18px
+
+  .page-main
+    &__title
+      font-size: 53px
+      line-height: 57px
+      padding-top: 83px
+      width: 700px
