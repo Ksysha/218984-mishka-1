@@ -1,0 +1,127 @@
+.promo-goods
+  position: relative
+  padding-bottom: 42px
+  margin-bottom: 30px
+  &::after
+    @include pseudo(100%, 7px)
+    background-image: url('../img/zigzag-line-desktop.png')
+    background-position-x: 8px
+    bottom: 0
+  &__container
+    @include container()
+  &__header
+    margin-top: 27px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-bottom: 25px
+  &__main
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    align-content: space-between
+    box-sizing: border-box
+  &__title
+    margin: 0
+    font-size: 25px
+    line-height: 30px
+    color: black
+    margin-bottom: 7px
+    display: inline-block
+    width: 100%
+  &__badge
+    color: mishka-color('primary')
+    text-transform: uppercase
+    font-weight: bold
+    line-height: 16px
+    display: inline-block
+  &__desc
+    font-size: 15px
+    padding-bottom: 7px
+    margin: 0
+    padding: 0
+    margin-bottom: 27px
+  &__img
+    margin: 0 auto
+    display: block
+    margin-bottom: 24px
+  &__price
+    color: mishka-color('content-text', $text-colors)
+    display: block
+    text-align: center
+    margin-bottom: 26px
+    font-weight: bold
+  &__order
+    padding-right: 80px
+    padding-left: 80px
+    display: block
+    margin: 0 auto
+    font-weight: bold
+
+@media (min-width: $tablet-widths)
+  .promo-goods
+    margin-bottom: 50px
+    &__header
+      margin-left: -3px
+      margin-top: 47px
+      margin-bottom: 50px
+    &__main
+      height: 430px
+    &__title
+      font-size: 43px
+      line-height: 50px
+      font-weight: bold
+      width: auto
+    &__badge
+      padding-top: 12px
+      padding-right: 23px
+      text-align: center
+      width: 80px
+    &__img
+      order: 4
+      width: 50%
+    &__desc
+      width: 43%
+      line-height: 30px
+      margin-top: -8px
+      margin-bottom: 45px
+      letter-spacing: 1px
+    &__price
+      font-size: 20px
+      line-height: 24px
+      margin-bottom: 34px
+    &__order
+      padding-right: 92px
+      padding-left: 100px
+@media (min-width: $desktop-widths)
+  .promo-goods
+    &__header
+      flex-direction: row-reverse
+      justify-content: flex-end
+      margin-bottom: 0
+      position: relative
+      z-index: 100
+      top: 80px
+      margin-top: 45px
+      margin-left: 42px
+    &__title
+      font-size: 53px
+      line-height: 57px
+      letter-spacing: -0.2px
+    &__badge
+      padding-right: 49px
+      padding-top: 16px
+    &__main
+      height: 636px
+      padding-left: 175px
+    &__desc
+      margin-top: 122px
+      width: 33%
+      letter-spacing: 1.1px
+      margin-bottom: 57px
+    &__img
+      width: 525px
+      height: 636px
+      margin-top: -36px
+    &__price
+      margin-left: 10px

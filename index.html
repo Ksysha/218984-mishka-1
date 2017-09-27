@@ -13,11 +13,11 @@
       <nav class="main-nav">
         <button type="button" class="main-nav__toggle">Открыть меню</button>
         <div class="page-header__logo">
-          <img src="http://placehold.it/86x35" alt="лого-хэдер">
+          <img src="../img/logo-mobile.svg" alt="лого-хэдер">
         </div>
         <ul class="main-nav__lists  main-nav--closed">
           <li class="main-nav__item  main-nav__catalog"><a href="catalog.html">Каталог товаров</a></li>
-          <li class="main-nav__item  main-nav__order"><a href="#">Вязание на заказ</a></li>
+          <li class="main-nav__item  main-nav__order"><a href="form.html">Вязание на заказ</a></li>
         </ul>
         <ul class="main-nav__user-lists  main-nav--closed">
           <li class="main-nav__user-item  main-nav__search"><a href="#">Поиск по сайту</a></li>
@@ -45,25 +45,27 @@
             <span class="promo-goods__badge">Товар недели</span>
           </div>
 
-          <p class="promo-goods__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-          <table class="goods-stats">
-            <tr>
-              <td class="goods-stats__field">Цвет:</td>
-              <td class="goods-stats__value">«Тиффани»/серый</td>
-            </tr>
-            <tr>
-              <td class="goods-stats__field">Диаметр:</td>
-              <td class="goods-stats__value">25&nbsp;см</td>
-            </tr>
-            <tr>
-              <td class="goods-stats__field">Высота:</td>
-              <td class="goods-stats__value">15&nbsp;см</td>
-            </tr>
-          </table>
-          <img src="http://placehold.it/525x636" alt="Фото товара">
-          <div class="promo-goods__buy">
-            <span class="promo-goods__price">Цена: 990 руб.</span>
-            <button class="promo-goods_order  btn" type="button">Заказать</button>
+          <div class="promo-goods__main">
+            <p class="promo-goods__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+            <section class="goods-stats">
+              <div class="goods-stats__field">
+                <div class="goods-stats__property">Цвет:</div>
+                <div class="goods-stats__value">«Тиффани»/серый</div>
+              </div>
+              <div class="goods-stats__field">
+                <div class="goods-stats__property">Диаметр:</div>
+                <div class="goods-stats__value">25&nbsp;см</div>
+              </div>
+              <div class="goods-stats__field">
+                <div class="goods-stats__property">Высота:</div>
+                <div class="goods-stats__value">15&nbsp;см</div>
+              </div>
+            </section>
+            <img class="promo-goods__img" src="img/triple-set-mobile@1x.jpg" alt="Фото товара">
+            <div class="promo-goods__buy">
+              <span class="promo-goods__price">Цена: 990 руб.</span>
+              <button class="promo-goods__order  btn" type="button">Заказать</button>
+            </div>
           </div>
         </div>
       </section>
@@ -71,12 +73,12 @@
         <div class="advantages__container">
           <h2 class="advantages__title">Коротко о нас:</h2>
           <ul class="advantages__lists">
-            <li class="advantages__item"><p>Экологически чистые материалы</p></li>
-            <li class="advantages__item"><p>Скандинавский стиль по российской цене</p></li>
-            <li class="advantages__item"><p>Увеличивает лайки на фотографиях</p></li>
-            <li class="advantages__item"><p>Связано вручную с любовью и умилением</p></li>
-            <li class="advantages__item"><p>Поддержка отечественного производителя</p></li>
-            <li class="advantages__item"><p>Поставляется в подарочной упаковке</p></li>
+            <li class="advantages__item  advantages__item--flower"><p>Экологически чистые&nbsp;материалы</p></li>
+            <li class="advantages__item  advantages__item--money"><p>Скандинавский стиль по&nbsp;российской&nbsp;цене</p></li>
+            <li class="advantages__item  advantages__item--heart"><p>Увеличивает лайки на&nbsp;фотографиях</p></li>
+            <li class="advantages__item  advantages__item--ball"><p>Связано вручную с любовью&nbsp;и&nbsp;умилением</p></li>
+            <li class="advantages__item  advantages__item--rocket"><p>Поддержка отечественного производителя</p></li>
+            <li class="advantages__item  advantages__item--gift"><p>Поставляется в подарочной&nbsp;упаковке</p></li>
           </ul>
         </div>
       </section>

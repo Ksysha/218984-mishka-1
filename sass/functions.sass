@@ -1,0 +1,10 @@
+@function mishka-color($key: 'primary', $palette: $brand-colors)
+  @return map-get($palette, $key)
+
+@function mishka-color-hover($color-name: 'primary')
+  $color: mishka-color($color-name)
+  @return rgba($color, 0.6)
+
+@function mishka-color-down($color-name: 'primary')
+  $color: mishka-color($color-name)
+  @return rgba($color, 0.3)
