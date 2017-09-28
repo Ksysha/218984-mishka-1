@@ -1,0 +1,85 @@
+.product
+  border: 1px solid mishka-color('decorative-line')
+  display: flex
+  flex-direction: column
+  &:not(:last-of-type)
+    margin-bottom: 30px
+  &__information
+    padding-top: 20px
+    padding-left: 27px
+    padding-right: 27px
+    padding-bottom: 27px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  &__title
+    margin: 0
+    font-size: 17px
+    line-height: 24px
+    color: mishka-color('text-dark', $text-colors)
+    font-weight: bold
+    margin-bottom: 5px
+  &__link
+    display: block
+    text-decoration: none
+  &__details
+    padding-bottom: 20px
+  &__purchase
+    border-top: 1px solid mishka-color('decorative-line')
+    display: flex
+    justify-content: space-between
+    padding-top: 21px
+  &__options
+    font-size: 13px
+    line-height: 30px
+  &__price
+    display: inline-block
+    color: mishka-color('text-dark', $text-colors)
+    font-weight: bold
+    margin: 0
+    font-size: 15px
+    line-height: 24px
+  &__buy
+    text-indent: -100000px
+  &__img
+    width: auto
+    height: 100%
+    cursor: pointer
+    img
+      background-size: contain
+
+@media (min-width: $tablet-widths)
+  .product
+    flex-direction: row
+    justify-content: space-between
+    &:not(:last-of-type)
+      margin-bottom: 54px
+    &__title
+      font-size: 20px
+      line-height: 24px
+    &__img
+      width: 333px //пока указываю фиксированно (так как не знаю как с картинками при адаптиве быть)
+      height: 332px
+      img
+        width: 334px
+        height: 334px
+    &__information
+      padding-top: 25px
+      padding-left: 27px
+      padding-right: 32px
+      padding-bottom: 26px
+      width: 50%
+      box-sizing: border-box
+    &__options
+      font-size: 15px
+      line-height: 30px
+    &__details
+      margin: 0
+      padding-right: 44px
+    &__price
+      font-size: 17px
+      line-height: 24px
+      margin-left: 5px
+    &__purchase
+      padding-top: 22px
+// @media (min-width: $desktop-widths)

@@ -1,0 +1,29 @@
+@mixin container()
+  width: auto //320px
+  margin: 0 auto
+  padding-left: 30px
+  padding-right: 30px
+
+  @media (min-width: $tablet-widths)
+    width: auto // 668px
+    padding-left: 50px
+    padding-right: 50px
+  @media (min-width: $desktop-widths)
+    width: 1050px
+    padding-left: 50px
+    padding-right: 50px
+    margin: 0 auto
+
+@mixin no-outline()
+  outline: none
+  background: transparent
+
+  &::before
+    display: none
+
+@mixin pseudo($width, $height, $display: block, $pos: absolute, $content: '')
+  content: $content
+  display: $display
+  position: $pos
+  width: $width
+  height: $height

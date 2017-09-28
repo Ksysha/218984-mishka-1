@@ -1,0 +1,133 @@
+.main-nav
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  background-color: white
+  &--closed
+    display: none
+  &__toggle
+    cursor: pointer
+    position: absolute
+    top: 0
+    right: 0
+    button
+      border: none
+      padding: 0
+      margin: 0
+      &:focus
+        outline: none
+  li:not(.main-nav__toggle)
+    border-bottom: 1px solid mishka-color('decorative-line')
+  &__lists,
+  &__user-lists
+    width: 100%
+    list-style-type: none
+    margin: 0
+    padding: 0
+  &__item,
+  &__user-item
+    width: 100%
+    a
+      box-sizing: border-box
+      display: inline-block
+      color: black
+      font-weight: bold
+      text-decoration: none
+      padding-left: 75px
+      padding-top: 27px
+      padding-bottom: 27px
+      width: 100%
+  &__search
+    a
+      color: black
+      font-weight: bold
+  &__promo-lists
+    display: none
+  &__link
+    display: none
+
+@media (min-width: $tablet-widths)
+  .main-nav
+    @include container()
+    width: auto
+    margin: 0
+    background-color: transparent
+    &__toggle
+      display: none
+    &__lists
+      display: inline-block
+      width: 49%
+      order: 2
+      margin-top: 16px
+      a
+        padding: 0
+        font-size: 15px
+    &__user-lists
+      display: inline-block
+      width: 52%
+      text-align: right
+      padding-top: 33px
+      padding-bottom: 33px
+      a
+        padding: 0
+    &__item
+      width: auto
+      &:not(:last-of-type)
+        margin-right: 31px
+    &__user-item
+      width: auto
+    li:not(.main-nav__toggle)
+      border-bottom: none
+      display: inline-block
+    &__search
+      padding: 0
+    &__link
+      font-size: 15px
+      text-decoration: none
+      color: mishka-color('content-text', $text-colors)
+
+@media (min-width: $desktop-widths)
+  .main-nav
+    background-color: transparent
+    &__lists
+      order: 0
+      margin: 0
+      font-size: 17px
+      display: inline-block
+      width: auto
+    &__user-lists
+      order: 3
+      padding-top: 31px
+      display: inline-block
+      width: auto
+    &__item
+      padding-top: 31px
+      padding-bottom: 33px
+      padding-right: 35px
+      a
+        letter-spacing: 1.2px
+      &:not(:last-of-type)
+        margin-right: 30px
+        border-right: 1px solid mishka-color('decorative-line')
+    &__promo-lists
+      display: inline-block
+      list-style-type: none
+      margin: 0
+      padding: 0
+      margin-top: 18px
+      order: 3
+    &__promo-item
+      display: inline-block
+      a
+        box-sizing: border-box
+        display: inline-block
+        color: black
+        font-weight: bold
+        text-decoration: none
+        font-size: 15px
+      &:not(:last-of-type)
+        margin-right: 57px
+    &__link
+      margin: 0
+      margin-top: 18px

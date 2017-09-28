@@ -1,0 +1,87 @@
+.advantages
+  &__container
+    @include container()
+  &__title
+    margin: 0
+    padding: 0
+    letter-spacing: -0.4px
+    color: mishka-color('text-dark', $text-colors)
+  &__lists
+    list-style-type: none
+    margin: 0
+    padding: 0
+    margin-top: 35px
+  &__item
+    position: relative
+    padding-top: 53px
+    margin-bottom: 30px
+    width: 98%
+    &::before
+      top: 0
+    p
+      line-height: 20px
+      margin: 0
+      font-weight: bold
+      color: mishka-color('text-dark', $text-colors)
+    &--flower
+      &::before
+        @include pseudo(32px, 37px)
+        background-image: url('../img/icon-feature-flower.svg')
+        left: 8px
+    &--money
+      &::before
+        @include pseudo(47px, 27px)
+        background-image: url('../img/icon-feature-money.svg')
+        top: 1px
+    &--heart
+      &::before
+        @include pseudo(33px, 28px)
+        background-image: url('../img/icon-feature-heart.svg')
+        left: 7px
+        top: 5px
+    &--ball
+      &::before
+        @include pseudo(35px, 34px)
+        background-image: url('../img/icon-feature-ball.svg')
+        left: 3px
+        top: 3px
+    &--rocket
+      &::before
+        @include pseudo(55px, 23px)
+        background-image: url('../img/icon-feature-rocket.svg')
+        left: -6px
+        top: 4px
+    &--gift
+      &::before
+        @include pseudo(33px, 32px)
+        background-image: url('../img/icon-feature-gift.svg')
+        left: 3px
+        top: 2px
+
+@media (min-width: $tablet-widths)
+  .advantages
+    &__title
+      font-size: 43px
+      line-height: 50px
+      margin-left: -4px
+    &__lists
+      column-count: 2
+      margin-top: 50px
+      padding-right: 17px
+    &__item
+      margin-bottom: 55px
+      p
+        font-size: 20px
+        line-height: 23px
+
+@media (min-width: $desktop-widths)
+  .advantages
+    box-sizing: border-box
+    padding-left: 175px
+    padding-top: 27px
+    &__title
+      font-size: 53px
+      line-height: 57px
+    &__lists
+      width: 65%
+
