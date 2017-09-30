@@ -82,4 +82,25 @@
       margin-left: 5px
     &__purchase
       padding-top: 22px
-// @media (min-width: $desktop-widths)
+@media (min-width: $desktop-widths)
+  .product
+    flex-direction: column
+    justify-content: space-between
+    width: min-content
+    height: max-content
+    &:not(:last-of-type)
+      margin-bottom: 54px
+    &__title
+      font-size: 20px
+      line-height: 24px
+    &__img
+      width: 316px //пока указываю фиксированно (так как не знаю как с картинками при адаптиве быть)
+      height: 462px
+      img
+        width: 316px
+        height: 462px
+    &__options
+      font-size: 15px
+      line-height: 30px
+    &__information
+      width: 100%

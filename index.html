@@ -87,38 +87,47 @@
           <h2 class="reviews__title">Отзывы</h2>
           <div class="reviews__lists">
             <article class="reviews__item">
-              <p>Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильнее, а также набирают больше лайков!</p>
-              <cite class="reviews__author-name">Анастасия Красильникова</cite>
-              <span class="reviews__author-mail">@misssssiskras</span>
+              <p class="reviews__text">Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильнее, а также набирают больше лайков!</p>
+              <div class="reviews__author">
+                <cite class="reviews__author-name">Анастасия Красильникова</cite>
+                <span class="reviews__author-mail">@misssssiskras</span>
+              </div>
+              <div class="reviews__control">
+                <button class="reviews__toggle  reviews__toggle--prev" type="button">Предыдущий отзыв</button>
+                <button class="reviews__toggle  reviews__toggle--next" type="button">Следующий отзыв</button>
+              </div>
             </article>
-            <button class="reviews__toggle  reviews__toggle--prev" type="button">Предыдущий отзыв</button>
-            <button class="reviews__toggle  reviews__toggle--next" type="button">Следующий отзыв</button>
+
           </div>
           <a href="#" class="reviews__write  btn">Написать</a>
         </div>
       </section>
       <section class="contacts">
         <div class="contacts__container">
-          <h2 class="contacts__title">Контакты</h2>
-          <table class="contacts-information">
-            <tr>
-              <td class="contacts-information__field">e-mail:</td>
-              <td class="contacts-information__value">
-                <a href="'mailto:info@mimimishkashop.ru'">info@mimimishkashop.ru</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="contacts-information__field">адрес:</td>
-              <td class="contacts-information__value">
-                г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
-              </td>
-            </tr>
-          </table>
+          <div class="contacts__header">
+            <h2 class="contacts__title">Контакты</h2>
+          </div>
+          <div class="contacts__main">
+            <div class="contacts-information">
+              <div class="contacts-information__field">
+                <div class="contacts-information__property">e-mail:</div>
+                <div class="contacts-information__value">
+                  <a class="contacts-information__link" href="'mailto:info@mimimishkashop.ru'">info@mimimishkashop.ru</a>
+                </div>
+              </div>
+              <div class="contacts-information__field">
+                <div class="contacts-information__property">адрес:</div>
+                <div class="contacts-information__value">
+                  г. Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8,&nbsp;офис&nbsp;101
+                </div>
+              </div>
+            </div>
+            <div class="contacts__map">
+              <img src="../img/map-mobile@1x.jpg" alt="карта">
+            </div>
+            <a href="#" class="contacts__write  btn">Напишите нам</a>
+          </div>
         </div>
-        <div class="contacts__map">
-          <img src="http://placehold.it/525x457" alt="карта">
-        </div>
-        <a href="#" class="contacts__wtite  btn">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
