@@ -1,6 +1,8 @@
 .contacts-information
   margin-left: -2px
-  margin-bottom: 37px
+  margin-bottom: 7px
+  display: flex
+  flex-direction: column
   &__field
     width: 100%
     display: flex
@@ -26,15 +28,22 @@
     letter-spacing: 0.1px
 
 @media (min-width: $tablet-widths)
-  .goods-stats
-    margin-bottom: 23px
+  .contacts-information
+    flex-direction: row
+    margin-bottom: 27px
     &__value
-      width: 66%
-      letter-spacing: -1.5px
+      width: 77%
+      font-size: 17px
+    &__property
+      font-size: 17px
 
 @media (min-width: $desktop-widths)
-  .goods-stats
-    margin-bottom: 77px
-    &__field
-      margin-bottom: 7px
-      padding-bottom: 8px
+  .contacts-information
+    flex-direction: column
+    margin-bottom: 50px
+    width: 39%
+  &__value
+    width: 77%
+    font-size: 17px
+  &__property
+    font-size: 17px

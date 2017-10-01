@@ -1,5 +1,30 @@
 .page-footer
+  background-color: mishka-color('background-secondary')
+  padding-top: 24px
   &__container
     @include container()
+    display: flex
+    flex-direction: column
+  &__logo
+    display: none
+  &__social
+     border-bottom: 1px solid #e5e5e5
+     padding-bottom: 27px
+  &__copyright
+    margin: 0 auto
+    margin-top: 20px
+    margin-bottom: 23px
+    text-decoration: none
+    display: flex
+    align-items: center
+    span
+    font-size: 19px
+    line-height: 18px
+    color: mishka-color('text-dark', $text-colors)
+    font-weight: bold
+    letter-spacing: 0.5px
+  &__htmlacademy-logo
+    margin-left: 18px
+
 // @media (min-width: $tablet-widths)
 // @media (min-width: $desktop-widths)
