@@ -26,5 +26,25 @@
   &__htmlacademy-logo
     margin-left: 18px
 
-// @media (min-width: $tablet-widths)
-// @media (min-width: $desktop-widths)
+@media (min-width: $tablet-width)
+  .page-footer
+    padding-top: 50px
+    padding-bottom: 58px
+    &__container
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+    &__social
+      border-bottom: none
+      padding-bottom: 0
+    &__logo
+      display: inline-block
+      width: 102px
+      height: 34px
+      img
+        width: inherit
+    &__copyright
+      margin: 0
+    &__htmlacademy-logo
+      margin-left: 25px
+// @media (min-width: $desktop-width)

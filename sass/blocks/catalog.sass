@@ -1,10 +1,15 @@
 .catalog
   margin-top: 30px
   margin-bottom: 31px
+  display: flex
+  flex-direction: column
   &__modal
     display: none
 
-// @media (min-width: $tablet-widths)
-@media (min-width: $desktop-widths)
-  display: flex
-  flex-wrap: wrap
+// @media (min-width: $tablet-width)
+@media (min-width: $desktop-width)
+  .catalog
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-bottom: 3px

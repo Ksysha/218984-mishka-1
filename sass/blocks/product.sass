@@ -48,7 +48,7 @@
     img
       background-size: contain
 
-@media (min-width: $tablet-widths)
+@media (min-width: $tablet-width)
   .product
     flex-direction: row
     justify-content: space-between
@@ -82,12 +82,12 @@
       margin-left: 5px
     &__purchase
       padding-top: 22px
-@media (min-width: $desktop-widths)
+@media (min-width: $desktop-width)
   .product
     flex-direction: column
     justify-content: space-between
-    width: min-content
-    height: max-content
+    width: 30%
+    height: 100%
     &:not(:last-of-type)
       margin-bottom: 54px
     &__title
@@ -104,3 +104,10 @@
       line-height: 30px
     &__information
       width: 100%
+      margin-bottom: auto
+    &__details
+      padding-right: 0
+      padding-bottom: 0
+      flex-basis: 97px
+    &__price
+      margin-left: 0
