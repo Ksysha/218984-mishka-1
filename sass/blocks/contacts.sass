@@ -1,20 +1,18 @@
 .contacts
   margin-top: 36px
   margin-bottom: 39px
-  &__main
+  &__container
     display: flex
     flex-direction: column
     flex-wrap: wrap
     align-content: space-between
     box-sizing: border-box
-  &__container
     @include container()
   &__title
     font-size: 18px
     line-height: 30px
     color: mishka-color('text-dark', $text-colors)
     margin: 0
-  &__header
     margin-bottom: 26px
   &__map
     overflow: hidden
@@ -30,14 +28,11 @@
   .contacts
     margin-top: 61px
     margin-bottom: 0
-    &__main
-      height: 768px
-    &__header
-      margin-left: -5px
-      margin-bottom: 48px
     &__title
       font-size: 43px
       line-height: 50px
+      margin-left: -5px
+      margin-bottom: 48px
     &__map
       margin-left: -50px
       margin-right: -50px
@@ -52,10 +47,20 @@
       padding-right: 40px
       padding-left: 37px
 
+
 @media (min-width: $desktop-width)
   .contacts
     padding-top: 85px
-    &__header
+    &__container
+      flex-direction: row
+    &__main
+      width: 50%
+      padding-left: 175px
+      box-sizing: border-box
+    &__title
+      font-size: 53px
+      line-height: 57px
+      letter-spacing: -0.5px
       padding-left: 175px
       position: relative
       &::after
@@ -63,23 +68,16 @@
         background-image: url('../img/icon-flag.svg')
         left: 68px
         top: -8px
-    &__main
-      height: 456px
-      padding-left: 175px
-      box-sizing: border-box
-    &__title
-      font-size: 53px
-      line-height: 57px
-      letter-spacing: -0.5px
     &__map
-      order: 4
       margin: 0
       background-color: red
       position: relative
       top: -39%
+      width: 50%
       img
         width: 525px
         height: 457px
     &__write
       margin-left: 0
       margin-right: auto
+      width: 50%
