@@ -39,7 +39,7 @@
       <form class="order-form" method="post" action="search.html">
         <div class="order-form__container">
           <p class="order-form__introduction">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-          <div class="order-form__block  order-form__block--flex">
+          <div class="order-form__block  order-form__block--type  order-form__block--flex">
             <span class="order-form__block-title">Тип</span>
             <div class="order-form__block-wrapper">
               <div class="order-form__field">
@@ -53,10 +53,10 @@
             </div>
           </div>
         </div>
-        <div class="order-form__block  order-form__block--grey">
+        <div class="order-form__block  order-form__block--grey  order-form__block--colour">
           <div class="order-form__container  order-form__container--flex">
             <span class="order-form__block-title">Цвет</span>
-            <div class="order-form__block-wrapper">
+            <div class="order-form__block-wrapper  order-form__block-wrapper--flex">
               <div class="order-form__field">
                 <input id="colour-white" type="checkbox" name="colour-white" value="white" class="order-form__checkbox" checked>
                 <label for="colour-white" class="order-form__label-checkbox">Белый</label>
@@ -120,8 +120,10 @@
             <p class="order-form__block-title">Доп</p>
             <textarea class="order-form__textarea" name="user-message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </div>
-          <p class="order-form__postscript">Все поля обязательны для заполнения</p>
-          <button type="submit" class="order-form__submit  btn">Отправить заказ</button>
+          <div class="order-form__action">
+            <p class="order-form__postscript">Все поля обязательны для заполнения</p>
+            <button type="submit" class="order-form__submit  btn">Отправить заказ</button>
+          </div>
         </div>
       </form>
     </main>
