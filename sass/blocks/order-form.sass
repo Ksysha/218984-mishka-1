@@ -1,15 +1,48 @@
 .order-form
   padding-top: 10px
+  padding-bottom: 55px
   &__container
     @include container()
+    &--flex
+      display: flex
+      flex-direction: column
   &__introduction
     font-size: 13px
     line-height: 24px
+    margin: 0
+    margin-top: 13px
+    margin-bottom: 1px
   &__block
-    padding-top: 10px
-    margin-bottom: 14px
+    padding-top: 22px
+    margin-bottom: 2px
+    &--flex
+      display: flex
+      flex-direction: column
+
     &--user
-      margin-top: 20px
+      padding-top: 14px
+      .order-form__block-title
+        margin-bottom: 33px
+      .order-form__field:last-of-type
+        margin-bottom: 0
+        .order-form__text-input
+          padding-bottom: 15px
+          margin-bottom: 10px
+
+    &--contacts
+      .order-form__field
+        margin-bottom: 31px
+        &:last-of-type
+          margin-bottom: 3px
+      .order-form__block-title
+        margin-bottom: 8px
+
+    &--note
+      .order-form__block-title
+        margin-bottom: 33px
+
+  &__field
+    margin-bottom: 14px
   &__block-title
     font-size: 17px
     line-height: 16px
@@ -19,7 +52,7 @@
     display: block
     margin: 0
     position: relative
-    margin-bottom: 20px
+    margin-bottom: 19px
     &::after
       @include pseudo(76%, 1px)
       background-color: mishka-color('primary')
@@ -32,17 +65,19 @@
         &::before
           background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAEx0lEQVRYhb3Yeaic1RkG8F8m8RZNYiwhbugobq2RuEQlIohGe9rauBClKmKsQiEuiMrgUFxQSt1GB0FEUajWBKRRsRSXVo6pRsFdoe5VFB1BW40So6RGTeIf75ncidzc+eZ6cx8Yzsw373nP851z3nXShg0bQErJGDANB+DnmIXtsA5f4EO8jX/ju36Kcs4jPp8yBlI741ScjHkVdHyFFViGv5XflTEIwT1xGc7AVj3Pn8Zb+ETs3GTMwK7YGwdjQfmswi1ol+/jQvAnuBxNDJVn94odeRDf9pk/Q+z4Qvy66Fpc9P2l3+K1Pv/vhWeK0iHcjX3Kgg9UIEfs6h04FvPxkLivd4kXnT5WgvPwLA4q43ychXcqkNocnsDx+D1W4rd4EjsOSnAelmOmeMv5Rfl44c84RJzOgXgypTSrKsE9xN2aiiXiOL8eR3JdfIAT8JgwpgdTSlv3IziE+8QduR+/2wLENiLnvFJ4hZfFqd3Uj+CVmIvntjS5LnLO/8OZWI/FKaUFmyO4BxrlexNrJoIg5JxfFz4Wbk4pbfSzvQQvFT5vibCsCUXO+To8LjZqUff5FEgpbd/z8JpBFNfbzX3EEf0Su4m4+xYextJOo/XpAOqWCo/RwJ0M7+DpwkAewH8qEptSbzdvxJvieA7F9iJWHy3C2bv1dvPsquxyznfhRcxOKR3aS3BhGe+pSG6yCPwNozv76biz3m7+sSpJPFXGk6CWUtoGh5WHD1VUci2OG2DRK+rt5sL+YohTJE5BDXPE8T6Ptf1m19vNvXDxAOS6uKHebg71F/NCGQ9MKU2uieBPJJdVcLax5ZF74lf9hHLOa/Ge2LTda4YD9ccVFzpqDOS6OLKiXJfLTjXD6U7VTHeXgSiNbW6Xy7Sa4XphcsXJfeuLUfBNRbnuFfquhi/Lj20rTq56V0fCuxXlppXxq5qovogaogr+MRClTfFIRbl6GTs1EQlg34qTl+CzQVgVLO80Wi/0E0opzcBOWJ1z/qgm4uYqzBZ54KjoNFqrcD42DEBuDS6qKHtUGZ+GWs55ncgiiOy5LzqN1jIR5tZXEF+NkzqN1msVCZ5SxuUMx9FlZTyxohKdRusmUeuOZjQrcFin0Xq0is4Sdk8XL34vw+b8d1Fl/UKUh5UModNo/bPebs7G4ThGGNpavI+HO43W61X09OAPZXws59yBST29mUtxtbC0BSNOH2f09mNSSkN4BT/D0Tnnx9k0VboF/8VvhBFMNG4X5P7VJcemBFcbzlKuF6n3hCCltEg0Bf6P83r/+2Gy+Vfh56aK8nOHCSA3p6wJF+WcN8noR8qGzxVl51xh3TtvQXL7Ke4Et+Wc7/ihzEgE14j+yRsiPXpEkB1vLBJG0W0SXDCS0ObqiU9xhPDmB+Al3DZOxKaLztaSsv7tOK0EjMoE4XNRF9wswto5ooF07o8g9iexa2eJfs/iondEcv0IEk73wkK0e+S3lkVuFc556ijzZ4pW8TLhJS7D7iIQzBF9w1FRtbZ4AvuLWH2JaJnNMbybHXEtVhWd24qUaWaPjvV4VLiwFRXXHaj4WSfq5nsKuZPFDs4tZOojzPlc3OPlIrZ+NMB6AxPsxavlcxUmiRg8Cz8VJcFqsasrx6h/I74HGsE2D8kYKvcAAAAASUVORK5CYII=')
   &__label-radio,
-  &__label-checkbox
+  &__label-checkbox,
+  &__label
     display: block
     font-size: 17px
     line-height: 18px
     font-weight: bold
     color: mishka-color('text-dark', $text-colors)
+  &__label-radio,
+  &__label-checkbox
     padding-left: 62px
     position: relative
   &__label-radio
     padding-top: 16px
-    padding-bottom: 13px
     &::before
       @include pseudo(40px, 40px)
       background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAE0klEQVRYhcWZXUhbVxzAf0lNtOpQK7VzXcC6qbHW6sTR0GkNzlspxYdtD6uyvShYGPtgFIM4YcMH2QbDMjrGVgqjD0M3YdgiMk+05qFSFGTpxK3LwK9Sayyxpk2ckMgebo7e2WiqS5MfXPifc88593c/OF9XV1NTw/8gFSgBzMBBIB0IAivAPPAX4AQC2zUghNjxAgl7kHoBeBt4CzjxFG08BhxAD/BLKP3U7EbwJeAT4B3AIDOLioowmUykp6eTkpLC+vo6Pp+PpaUl7t69i8vlSgXOho6HwCXgq1AcFcFEoB2wAUaAqqoqrFYrFouFhISdm/D5fIyMjHDz5k3Gx8fTQ22dD7X3Q6SL6yJ8gy8DPwGvAJw+fZqGhgYOHz4c8a7C4XQ66e3t5datWzLrZ6BJCPFoL4IngH4gs7CwkKamJkpKSvYktpWBgQGuXLnCysoKwG/AGSHE/d0IngCGgJSqqipsNhtGozEqcpLFxUU6OzuZmpoCcAGvCSGWtpbTh6mbC1wHUhRFob29PepyAIcOHaKjo4OysjKAPOC6oij7IwkaUb+Lg6dOncJms0VdTEtaWhqtra3k5eWB+ta6Igl+CpSZzeZnLifJyMjAZrOh0+kAziuKcnY7wVzgAkBzczOJiYkxEQTIycmhsbFRJr9WFGWjn9UKtgGJiqJQXFwcMznJuXPnKC0tBfVBvSvzpWCWzKyvr4+5nETTo1yQgRRsAIwVFRWYTKZYe21QW1tLfn4+wFFFUV6FTcE3AKqrq+Oktonm83oTVMFkwAJgsVjiY6WhoqJChtWgChYDRrPZjMFg2K5ezCgoKJBhqaIo+/RAPrDnCUC0MRgMZGdngzpo5OiB5wEyMzPj6fUfDhw4IMNsPfAcwP79TwyDcUPjkqontF4IBoNxE9qKxiWgBx4B+P3+uAltZXV1VYaP9airL5aWnpiKxQ232y3DOT3wB8Dc3FzchLT4fD48Hg+AVwhxTw/8CTycnZ2VU/C44nQ6ZTgKakcdBG4AjIyMxEVKi8PhkOEQbI7FPQCjo6NxUNpkbW2N4eFhgHXU1eSGYB/wYGJigrGxsTjpQXd3twztQog52BT8h9B6oK+vL/ZmQCAQ0L7ez2WgnVFfAu6PjY1x7dq1WLoB0NXVxfz8PMCwEOKGzNcKeoGPAS5fvszCwkLM5Ox2O4ODgwCrwHvac/tyc3O16UkgNxAIlExOTnLy5MlnPkZPT0/T2toqk+8LIQZ3EgQYBGo8Hs+Ld+7coby8nOTk5GciNzMzQ0tLC2trawDfCiE6tpYJt7PgB+qAqdu3b9PW1obL5Yq6nN1up7m5WQ4OvcAH4cqFe4JSshuoXF5eNvX397O8vByVJYHf7+fixYtcvXpVZn0HNAohwk6nIm2/JQJfot6d7vjx41itVurq6vYk1tPTw9DQEIuLi6B2bR8JIb7fqV4kQYkV+AY4CnDkyBGOHTtGZWUlhYWFJCUlha3k9XpxOp04HA5tHwcwAHwI/B1pj/ppBQH2oe5NtwCl2hNZWVmkpaWRmppKMBjE7/fjdrvxer3aYuvAr8AXqHvWQHQ30YPAj6GjGHUT/XWgzO12J2vmcFo8qLOSIdSx9d4urrdrQS2/h47PAB1gQv0NkYG6hPACc8CDPba/wb+HKoZAWhuYVgAAAABJRU5ErkJggg==')
@@ -61,12 +96,64 @@
   &__label-checkbox
     padding-top: 16px
     padding-bottom: 13px
-    margin-bottom: 14px
     &::before
       @include pseudo(40px, 39px)
       background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAnCAYAAAB9qAq4AAAAYElEQVRYhe3YsQ3AMAgAQRNlNJia4Zw2RaQUX9iW/itEdaIkMnOOjbtWA/66X3OsAHT3576q5hgHXFAgTSBNIE0gTSBNIE0gTSBNIE0gTSBNIE0gTSBNIE0gbXtg+ESHPRoGB+WPpZ47AAAAAElFTkSuQmCC')
       left: 0
       top: 5px
-// @media (min-width: $tablet-width)
 
+  ::-webkit-input-placeholder
+      color: mishka-color-down('content-text', $text-colors)
+      font-size: 17px
+      line-height: 18px
+  &__text-input
+    border: none
+    border-bottom: 2px solid mishka-color('text-dark', $text-colors)
+    padding-top: 15px
+    padding-bottom: 16px
+    width: 100%
+    margin-bottom: 8px
+    &:focus
+      outline: none
+  &__textarea
+    border: 2px solid mishka-color('text-dark', $text-colors)
+    padding-top: 15px
+    padding-left: 17px
+    resize: none
+    height: 142px
+    width: 100%
+    box-sizing: border-box
+    &:focus
+      outline: none
+  &__postscript
+    font-size: 14px
+    color: mishka-color('content-text', $text-colors)
+    margin: 0
+    margin-top: 6px
+    margin-left: -3px
+    margin-right: -5px
+    margin-bottom: 18px
+  &__submit
+    width: 100%
+@media (min-width: $tablet-width)
+  .order-form
+    &__container
+      &--flex
+        flex-direction: row
+        justify-content: space-between
+    &__block
+      &--grey
+        background-color: mishka-color('background-secondary')
+      &--flex
+        flex-direction: row
+        justify-content: space-between
+    &__block-wrapper
+      width: 75%
+    &__introduction
+      font-size: 17px
+      line-height: 30px
+    &__block-title
+      display: inline-block
+      &::after
+        display: none
 // @media (min-width: $desktop-width)

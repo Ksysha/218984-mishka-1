@@ -31,86 +31,94 @@
       </nav>
     </header>
     <main>
-      <div class="page-main__headline">
-        <h1 class="page-main__title">Вязание на заказ</h1>
+      <div class="page-main__headline  page-main__headline--form">
+        <div class="page-main__container">
+          <h1 class="page-main__title  page-main__title--form">Вязание на заказ</h1>
+        </div>
       </div>
       <form class="order-form" method="post" action="search.html">
         <div class="order-form__container">
           <p class="order-form__introduction">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-          <div class="order-form__block">
+          <div class="order-form__block  order-form__block--flex">
             <span class="order-form__block-title">Тип</span>
-            <div class="order-form__field">
-              <input type="radio" name="type" id="type-1" class="order-form__radio">
-              <label for="type-1" class="order-form__label-radio">Аксессуар для интерьера</label>
-            </div>
-            <div class="order-form__field">
-              <input type="radio" name="type" id="type-2" class="order-form__radio" checked>
-              <label for="type-2" class="order-form__label-radio">Детская игрушка</label>
+            <div class="order-form__block-wrapper">
+              <div class="order-form__field">
+                <input type="radio" name="type" id="type-1" class="order-form__radio">
+                <label for="type-1" class="order-form__label-radio">Аксессуар для интерьера</label>
+              </div>
+              <div class="order-form__field">
+                <input type="radio" name="type" id="type-2" class="order-form__radio" checked>
+                <label for="type-2" class="order-form__label-radio">Детская игрушка</label>
+              </div>
             </div>
           </div>
         </div>
         <div class="order-form__block  order-form__block--grey">
-          <div class="order-form__container">
+          <div class="order-form__container  order-form__container--flex">
             <span class="order-form__block-title">Цвет</span>
-            <div class="order-form__field">
-              <input id="colour-white" type="checkbox" name="colour-white" value="white" class="order-form__checkbox" checked>
-              <label for="colour-white" class="order-form__label-checkbox">Белый</label>
-            </div>
-            <div class="order-form__field">
-              <input id="colour-grey" type="checkbox" name="colour-grey" value="grey" class="order-form__checkbox" checked>
-              <label for="colour-grey" class="order-form__label-checkbox">Серый</label>
-            </div>
-            <div class="order-form__field">
-              <input id="colour-blue" type="checkbox" name="colour-blue" value="blue" class="order-form__checkbox">
-              <label for="colour-blue" class="order-form__label-checkbox">«Тиффани»</label>
-            </div>
-            <div class="order-form__field">
-              <input id="colour-black" type="checkbox" name="colour-black" value="black" class="order-form__checkbox">
-              <label for="colour-black" class="order-form__label-checkbox">Черный</label>
-            </div>
-            <div class="order-form__field">
-              <input id="colour-pink" type="checkbox" name="colour-pink" value="pink" class="order-form__checkbox">
-              <label for="colour-pink" class="order-form__label-checkbox">Розовый</label>
-            </div>
-            <div class="order-form__field">
-              <input id="colour-orange" type="checkbox" name="colour-orange" value="orange" class="order-form__checkbox">
-              <label for="colour-orange" class="order-form__label-checkbox">Оранжевый</label>
+            <div class="order-form__block-wrapper">
+              <div class="order-form__field">
+                <input id="colour-white" type="checkbox" name="colour-white" value="white" class="order-form__checkbox" checked>
+                <label for="colour-white" class="order-form__label-checkbox">Белый</label>
+              </div>
+              <div class="order-form__field">
+                <input id="colour-grey" type="checkbox" name="colour-grey" value="grey" class="order-form__checkbox" checked>
+                <label for="colour-grey" class="order-form__label-checkbox">Серый</label>
+              </div>
+              <div class="order-form__field">
+                <input id="colour-blue" type="checkbox" name="colour-blue" value="blue" class="order-form__checkbox">
+                <label for="colour-blue" class="order-form__label-checkbox">«Тиффани»</label>
+              </div>
+              <div class="order-form__field">
+                <input id="colour-black" type="checkbox" name="colour-black" value="black" class="order-form__checkbox">
+                <label for="colour-black" class="order-form__label-checkbox">Черный</label>
+              </div>
+              <div class="order-form__field">
+                <input id="colour-pink" type="checkbox" name="colour-pink" value="pink" class="order-form__checkbox">
+                <label for="colour-pink" class="order-form__label-checkbox">Розовый</label>
+              </div>
+              <div class="order-form__field">
+                <input id="colour-orange" type="checkbox" name="colour-orange" value="orange" class="order-form__checkbox">
+                <label for="colour-orange" class="order-form__label-checkbox">Оранжевый</label>
+              </div>
             </div>
           </div>
         </div>
         <div class="order-form__container">
-          <div class="order-form__block  order-form__block--user">
+          <div class="order-form__block  order-form__block--user  order-form__block--flex">
             <p class="order-form__block-title">ФИО</p>
-            <div class="order-form__field">
-              <label for="user-name">Имя:</label>
-              <input type="text" name="user-name" id="user-name" value="user-name" placeholder="Введите ваше имя">
-            </div>
-            <div class="order-form__field">
-              <label for="user-surname">Фамилия:</label>
-              <input type="text" name="user-surname" id="user-surname" value="user-surname" placeholder="Укажите фамилию">
-            </div>
-            <div class="order-form__field">
-              <label for="user-patronymic">Отчество:</label>
-              <input type="text" name="user-patronymic" id="user-patronymic" value="user-patronymic" placeholder="Отчество, если желаете">
+            <div class="order-form__block-wrapper">
+              <div class="order-form__field">
+                <label class="order-form__label" for="user-name">Имя:</label>
+                <input class="order-form__text-input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя">
+              </div>
+              <div class="order-form__field">
+                <label class="order-form__label" for="user-surname">Фамилия:</label>
+                <input class="order-form__text-input" type="text" name="user-surname" id="user-surname" placeholder="Укажите фамилию">
+              </div>
+              <div class="order-form__field">
+                <label class="order-form__label" for="user-patronymic">Отчество:</label>
+                <input class="order-form__text-input" type="text" name="user-patronymic" id="user-patronymic" placeholder="Отчество, если желаете">
+              </div>
             </div>
           </div>
         </div>
-        <div class="order-form__block  order-form__block--grey">
+        <div class="order-form__block  order-form__block--grey  order-form__block--contacts">
           <div class="order-form__container">
-            <div class="order-form__block">
+            <div class="order-form__field">
               <p class="order-form__block-title">Тел</p>
-              <input type="tel" name="user-phone" placeholder="+7 XXX XX XX">
+              <input class="order-form__text-input" type="tel" name="user-phone" placeholder="+7 XXX XX XX">
             </div>
-            <div class="order-form__block">
+            <div class="order-form__field">
               <p class="order-form__block-title">e-mail</p>
-              <input type="text" name="user-email" placeholder="Ваш Email">
+              <input class="order-form__text-input" type="text" name="user-email" placeholder="Ваш Email">
             </div>
           </div>
         </div>
         <div class="order-form__container">
-          <div class="order-form__block">
+          <div class="order-form__block  order-form__block--note">
             <p class="order-form__block-title">Доп</p>
-            <textarea name="user-message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <textarea class="order-form__textarea" name="user-message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </div>
           <p class="order-form__postscript">Все поля обязательны для заполнения</p>
           <button type="submit" class="order-form__submit  btn">Отправить заказ</button>
