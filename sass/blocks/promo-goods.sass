@@ -58,7 +58,7 @@
     margin: 0 auto
     font-weight: bold
 
-@media (min-width: $tablet-widths)
+@media (min-width: $tablet-width)
   .promo-goods
     margin-bottom: 50px
     &__header
@@ -66,7 +66,16 @@
       margin-top: 47px
       margin-bottom: 50px
     &__main
-      height: 430px
+      flex-direction: row
+    &__details
+      width: 43%
+    &__photo
+      width: 50%
+      margin-left: auto
+    &__buy
+      width: 44%
+      margin-top: -134px
+      margin-right: auto
     &__title
       font-size: 43px
       line-height: 50px
@@ -78,10 +87,9 @@
       text-align: center
       width: 80px
     &__img
-      order: 4
-      width: 50%
+      width: 333px
+      height: 404px
     &__desc
-      width: 43%
       line-height: 30px
       margin-top: -8px
       margin-bottom: 45px
@@ -93,8 +101,10 @@
     &__order
       padding-right: 92px
       padding-left: 100px
-@media (min-width: $desktop-widths)
+      margin: 0
+@media (min-width: $desktop-width)
   .promo-goods
+    margin-bottom: 62px
     &__header
       flex-direction: row-reverse
       justify-content: flex-end
@@ -104,6 +114,19 @@
       top: 80px
       margin-top: 45px
       margin-left: 42px
+    &__main
+      flex-direction: row
+      padding-left: 175px
+    &__details
+      width: 33%
+    &__photo
+      width: 60%
+      margin-left: auto
+      margin-top: -36px
+    &__buy
+      width: 34%
+      margin-top: -134px
+      margin-right: auto
     &__title
       font-size: 53px
       line-height: 57px
@@ -111,17 +134,11 @@
     &__badge
       padding-right: 49px
       padding-top: 16px
-    &__main
-      height: 636px
-      padding-left: 175px
     &__desc
       margin-top: 122px
-      width: 33%
       letter-spacing: 1.1px
       margin-bottom: 57px
     &__img
       width: 525px
       height: 636px
-      margin-top: -36px
-    &__price
-      margin-left: 10px
+

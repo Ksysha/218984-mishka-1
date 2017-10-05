@@ -31,8 +31,8 @@
       </nav>
     </header>
     <main class="page-main">
-      <div class="page-main__headline">
-        <h1 class="page-main__title">Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
+      <div class="page-main__headline  page-main__headline--index">
+        <h1 class="page-main__title  page-main__title--index">Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
         <ul class="page-main__product-groups">
           <li class="page-main__product-group  page-main__product-group--group1"><a href="#">Предметы интерьера</a></li>
           <li class="page-main__product-group  page-main__product-group--group2"><a href="#">Детские игрушки</a></li>
@@ -46,22 +46,26 @@
           </div>
 
           <div class="promo-goods__main">
-            <p class="promo-goods__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-            <section class="goods-stats">
-              <div class="goods-stats__field">
-                <div class="goods-stats__property">Цвет:</div>
-                <div class="goods-stats__value">«Тиффани»/серый</div>
-              </div>
-              <div class="goods-stats__field">
-                <div class="goods-stats__property">Диаметр:</div>
-                <div class="goods-stats__value">25&nbsp;см</div>
-              </div>
-              <div class="goods-stats__field">
-                <div class="goods-stats__property">Высота:</div>
-                <div class="goods-stats__value">15&nbsp;см</div>
-              </div>
-            </section>
-            <img class="promo-goods__img" src="img/triple-set-mobile@1x.jpg" alt="Фото товара">
+            <div class="promo-goods__details">
+              <p class="promo-goods__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+              <section class="goods-stats">
+                <div class="goods-stats__field">
+                  <div class="goods-stats__property">Цвет:</div>
+                  <div class="goods-stats__value">«Тиффани»/серый</div>
+                </div>
+                <div class="goods-stats__field">
+                  <div class="goods-stats__property">Диаметр:</div>
+                  <div class="goods-stats__value">25&nbsp;см</div>
+                </div>
+                <div class="goods-stats__field">
+                  <div class="goods-stats__property">Высота:</div>
+                  <div class="goods-stats__value">15&nbsp;см</div>
+                </div>
+              </section>
+            </div>
+            <div class="promo-goods__photo">
+              <img class="promo-goods__img" src="img/triple-set-mobile@1x.jpg" alt="Фото товара">
+            </div>
             <div class="promo-goods__buy">
               <span class="promo-goods__price">Цена: 990 руб.</span>
               <button class="promo-goods__order  btn" type="button">Заказать</button>
@@ -87,64 +91,69 @@
           <h2 class="reviews__title">Отзывы</h2>
           <div class="reviews__lists">
             <article class="reviews__item">
-              <p>Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильнее, а также набирают больше лайков!</p>
-              <cite class="reviews__author-name">Анастасия Красильникова</cite>
-              <span class="reviews__author-mail">@misssssiskras</span>
+              <p class="reviews__text">Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильнее, а также набирают больше лайков!</p>
+              <div class="reviews__author">
+                <cite class="reviews__author-name">Анастасия Красильникова</cite>
+                <span class="reviews__author-mail">@misssssiskras</span>
+              </div>
+              <div class="reviews__control">
+                <button class="reviews__toggle  reviews__toggle--prev" type="button">Предыдущий отзыв</button>
+                <button class="reviews__toggle  reviews__toggle--next" type="button">Следующий отзыв</button>
+              </div>
             </article>
-            <button class="reviews__toggle  reviews__toggle--prev" type="button">Предыдущий отзыв</button>
-            <button class="reviews__toggle  reviews__toggle--next" type="button">Следующий отзыв</button>
+
           </div>
           <a href="#" class="reviews__write  btn">Написать</a>
         </div>
       </section>
       <section class="contacts">
         <div class="contacts__container">
-          <h2 class="contacts__title">Контакты</h2>
-          <table class="contacts-information">
-            <tr>
-              <td class="contacts-information__field">e-mail:</td>
-              <td class="contacts-information__value">
-                <a href="'mailto:info@mimimishkashop.ru'">info@mimimishkashop.ru</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="contacts-information__field">адрес:</td>
-              <td class="contacts-information__value">
-                г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
-              </td>
-            </tr>
-          </table>
+          <div class="contacts__main">
+            <h2 class="contacts__title">Контакты</h2>
+            <div class="contacts-information">
+              <div class="contacts-information__field">
+                <div class="contacts-information__property">e-mail:</div>
+                <div class="contacts-information__value">
+                  <a class="contacts-information__link" href="'mailto:info@mimimishkashop.ru'">info@mimimishkashop.ru</a>
+                </div>
+              </div>
+              <div class="contacts-information__field">
+                <div class="contacts-information__property">адрес:</div>
+                <div class="contacts-information__value">
+                  г. Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8,&nbsp;офис&nbsp;101
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contacts__map">
+            <img src="../img/map-mobile@1x.jpg" alt="карта">
+          </div>
+          <a href="#" class="contacts__write  btn">Напишите нам</a>
         </div>
-        <div class="contacts__map">
-          <img src="http://placehold.it/525x457" alt="карта">
-        </div>
-        <a href="#" class="contacts__wtite  btn">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__container">
         <div class="page-footer__logo">
-          <img src="http://placehold.it/102x34" alt="лого футер">
+          <img src="../img/logo-mobile.svg" alt="лого футер">
         </div>
         <div class="page-footer__social">
           <ul class="social-links">
-            <li>
-              <a href="#" class="social-link  social-link--inst">Инстаграмм</a>
+            <li class="social-links__item  social-links__item--inst">
+              <a href="#">Инстаграмм</a>
             </li>
-            <li>
-              <a href="#" class="social-link  social-link--fb">Фэйсбук</a>
+            <li class="social-links__item  social-links__item--fb">
+              <a href="#">Фэйсбук</a>
             </li>
-            <li>
-              <a href="#" class="social-link  social-link--tvit">Твиттер</a>
+            <li class="social-links__item  social-links__item--tvit">
+              <a href="#">Твиттер</a>
             </li>
           </ul>
         </div>
-        <p class="page-footer__copyright">
-          Разработано
-          <a href="https://htmlacademy.ru" class="page-footer__copyright-link">
-            <img src="http://placehold.it/27x34" alt="лого HTML academy">
-          </a>
-        </p>
+        <a href="https://htmlacademy.ru" class="page-footer__copyright">
+          <span>Разработано</span>
+          <img class="page-footer__htmlacademy-logo" src="../img/logo-htmlacademy.svg" alt="лого HTML academy">
+        </a>
       </div>
     </footer>
     <script src="js/main.js" charset="utf-8"></script>

@@ -1,0 +1,49 @@
+.contacts-information
+  margin-left: -2px
+  margin-bottom: 7px
+  display: flex
+  flex-direction: column
+  &__field
+    width: 100%
+    display: flex
+    justify-content: space-between
+    margin-bottom: 30px
+  &__property
+    padding: 0
+    display: inline-block
+    font-size: 15px
+    line-height: 30px
+    color: mishka-color('content-text', $text-colors)
+  &__value
+    display: inline-block
+    width: 70%
+    font-size: 15px
+    line-height: 30px
+    color: mishka-color('content-text', $text-colors)
+  &__link
+    border-bottom: 1px solid mishka-color('primary')
+    text-decoration: none
+    color: mishka-color('content-text', $text-colors)
+    padding-bottom: 4px
+    letter-spacing: 0.1px
+
+@media (min-width: $tablet-width)
+  .contacts-information
+    flex-direction: row
+    margin-bottom: 27px
+    &__value
+      width: 77%
+      font-size: 17px
+    &__property
+      font-size: 17px
+
+@media (min-width: $desktop-width)
+  .contacts-information
+    flex-direction: column
+    margin-bottom: 50px
+    width: 39%
+  &__value
+    width: 77%
+    font-size: 17px
+  &__property
+    font-size: 17px

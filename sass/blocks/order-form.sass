@@ -1,8 +1,313 @@
 .order-form
+  padding-top: 10px
+  padding-bottom: 55px
   &__container
     @include container()
+    &--flex
+      display: flex
+      flex-direction: column
+  &__introduction
+    font-size: 13px
+    line-height: 24px
+    margin: 0
+    margin-top: 13px
+    margin-bottom: 1px
+  &__block
+    padding-top: 22px
+    margin-bottom: 2px
+    &--flex
+      display: flex
+      flex-direction: column
+
+    &--user
+      padding-top: 14px
+      .order-form__block-title
+        margin-bottom: 33px
+      .order-form__field:last-of-type
+        margin-bottom: 0
+        .order-form__text-input
+          padding-bottom: 15px
+          margin-bottom: 10px
+
+    &--contacts
+      .order-form__field
+        margin-bottom: 31px
+        &:last-of-type
+          margin-bottom: 3px
+      .order-form__block-title
+        margin-bottom: 8px
+
+    &--note
+      .order-form__block-title
+        margin-bottom: 33px
+
+  &__field
+    margin-bottom: 14px
+  &__block-title
+    font-size: 17px
+    line-height: 16px
+    text-transform: uppercase
+    font-weight: bold
+    color: mishka-color('primary')
+    display: block
+    margin: 0
+    position: relative
+    margin-bottom: 19px
+    &::after
+      @include pseudo(76%, 1px)
+      background-color: mishka-color('primary')
+      right: 0
+      top: 50%
+  &__radio
+    display: none
+    &:checked
+      + label
+        &::before
+          background-color: mishka-color('primary')
+  &__label-radio,
+  &__label-checkbox,
+  &__label
+    display: block
+    font-size: 17px
+    line-height: 18px
+    font-weight: bold
+    color: mishka-color('text-dark', $text-colors)
+  &__label-radio,
+  &__label-checkbox
+    padding-left: 62px
+    position: relative
+  &__label-radio
+    padding-top: 16px
+    &::before
+      @include pseudo(36px, 36px)
+      box-sizing: border-box
+      background-color: white
+      border: 10px solid white
+      border-radius: 50%
+      box-shadow: 0 0 0 2px mishka-color('content-text', $text-colors)
+      left: 2px
+      top: 2px
+  &__field
+    &:first-of-type
+      .order-form__label-radio::before
+        top: 8px
+  &__checkbox
+    display: none
+    &:checked
+      + label
+        &::before
+          background-image: url('../img/icon-tick.svg')
+          background-size: 26px 17px
+          background-position: center
+          background-repeat: no-repeat
+  &__label-checkbox
+    padding-top: 16px
+    padding-bottom: 13px
+    &::before
+      @include pseudo(36px, 35px)
+      box-sizing: border-box
+      background-color: transparent
+      box-shadow: 0 0 0 2px mishka-color('content-text', $text-colors)
+      left: 2px
+      top: 7px
+
+  ::-webkit-input-placeholder
+      color: mishka-color-down('content-text', $text-colors)
+      font-size: 17px
+      line-height: 18px
+  &__text-input
+    border: none
+    border-bottom: 2px solid mishka-color('text-dark', $text-colors)
+    padding-top: 15px
+    padding-bottom: 16px
+    width: 100%
+    margin-bottom: 8px
+    background-color: transparent
+    &:focus
+      outline: none
+  &__textarea
+    border: 2px solid mishka-color('text-dark', $text-colors)
+    padding-top: 15px
+    padding-left: 17px
+    resize: none
+    height: 142px
+    width: 100%
+    box-sizing: border-box
+    &:focus
+      outline: none
+  &__postscript
+    font-size: 14px
+    color: mishka-color('content-text', $text-colors)
+    margin: 0
+    margin-top: 6px
+    margin-left: -3px
+    margin-right: -5px
+    margin-bottom: 18px
+  &__submit
+    width: 100%
+@media (min-width: $tablet-width)
+  .order-form
+    &__label-radio,
+    &__label-checkbox,
+    &__label
+      font-size: 19px
+      line-height: 18px
+    &__field
+      margin-bottom: 25px
+      &:first-of-type
+        .order-form__label-radio::before
+          top: 2px
+    &__container
+      &--flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: baseline
+    &__block
+      &--grey
+        background-color: mishka-color('background-secondary')
+      &--flex
+        flex-direction: row
+        justify-content: space-between
+      &--type
+        align-items: baseline
+        padding-bottom: 25px
+        padding-top: 56px
+      &--colour
+        padding-bottom: 42px
+        padding-top: 56px
+        .order-form__field
+          flex-basis: 50%
+      &--user
+        padding-top: 48px
+        padding-bottom: 55px
+        .order-form__field
+          display: flex
+          align-items: baseline
+          margin-bottom: 17px
+      &--contacts
+        padding-top: 54px
+        padding-bottom: 56px
+        .order-form__field
+          display: flex
+          align-items: baseline
+          justify-content: space-between
+          margin-bottom: 17px
+        .order-form__text-input
+          flex-basis: 72.3%
+      &--note
+        display: flex
+        align-items: baseline
+        justify-content: space-between
+        padding-top: 62px
+    &__textarea
+      width: 75%
+    &__block-wrapper
+      width: 75%
+      &--flex
+        display: flex
+        flex-wrap: wrap
+    &__introduction
+      font-size: 17px
+      line-height: 30px
+    &__block-title
+      display: inline-block
+      &::after
+        display: none
+    &__label-radio
+      padding-bottom: 18px
+      padding-top: 15px
+      padding-left: 80px
+      &::before
+        width: 48px
+        height: 48px
+        top: 2px
+        border: 14px solid white
+    &__radio
+      &:checked
+        + label
+          &::before
+            width: 48px
+            height: 48px
+
+    &__label-checkbox
+      padding-top: 20px
+      padding-left: 80px
+      &::before
+        width: 50px
+        height: 48px
+    &__checkbox
+      &:checked
+        + label
+          &::before
+            background-image: url('../img/icon-tick.svg')
+            background-size: 36px 23px
+            background-position: center
+            background-repeat: no-repeat
+
+    &__label
+      display: inline-block
+      margin-right: 25px
+    &__text-input
+      padding-bottom: 15px
+      padding-left: 17px
+    ::-webkit-input-placeholder
+      font-size: 19px
+      line-height: 18px
+    &__action
+      display: flex
+      flex-direction: row-reverse
+      justify-content: space-between
+      margin-top: 53px
+      margin-bottom: -3px
+    &__submit
+      width: 34.5%
+    &__postscript
+      font-size: 17px
+      line-height: 30px
+      margin: 0
+      margin-top: 9px
+      letter-spacing: -0.9px
 
 
-// @media (min-width: $tablet-widths)
-
-// @media (min-width: $desktop-widths)
+@media (min-width: $desktop-width)
+  .order-form
+    padding-bottom: 98px
+    &__introduction
+      padding-left: 175px
+      padding-right: 150px
+    &__block
+      padding-left: 64px
+      &--colour
+        padding-bottom: 43px
+        margin-bottom: 4px
+        .order-form__field
+          flex-basis: 28%
+        .order-form__block-wrapper
+          width: 90%
+          margin-left: 67px
+      &--user
+        align-items: baseline
+        .order-form__field
+          width: 80%
+      &--contacts
+        .order-form__field
+          justify-content: flex-start
+        .order-form__block-title
+          width: 10.5%
+        .order-form__text-input
+          flex-basis: 65%
+      &--note
+        justify-content: flex-start
+        .order-form__block-title
+          width: 11.3%
+        .order-form__textarea
+          width: 71%
+    &__block-wrapper
+      width: 89%
+      margin-left: 71px
+    &__action
+      padding-left: 175px
+      padding-right: 175px
+      margin-top: 90px
+    &__submit
+      width: 33%

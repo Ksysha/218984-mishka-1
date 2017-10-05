@@ -48,7 +48,7 @@
     img
       background-size: contain
 
-@media (min-width: $tablet-widths)
+@media (min-width: $tablet-width)
   .product
     flex-direction: row
     justify-content: space-between
@@ -82,4 +82,32 @@
       margin-left: 5px
     &__purchase
       padding-top: 22px
-// @media (min-width: $desktop-widths)
+@media (min-width: $desktop-width)
+  .product
+    flex-direction: column
+    justify-content: space-between
+    width: 30%
+    height: 100%
+    &:not(:last-of-type)
+      margin-bottom: 54px
+    &__title
+      font-size: 20px
+      line-height: 24px
+    &__img
+      width: 316px //пока указываю фиксированно (так как не знаю как с картинками при адаптиве быть)
+      height: 462px
+      img
+        width: 316px
+        height: 462px
+    &__options
+      font-size: 15px
+      line-height: 30px
+    &__information
+      width: 100%
+      margin-bottom: auto
+    &__details
+      padding-right: 0
+      padding-bottom: 0
+      flex-basis: 97px
+    &__price
+      margin-left: 0

@@ -47,7 +47,7 @@
   &__link
     display: none
 
-@media (min-width: $tablet-widths)
+@media (min-width: $tablet-width)
   .main-nav
     @include container()
     width: auto
@@ -83,11 +83,14 @@
     &__search
       padding: 0
     &__link
+      display: inline-block
+      order: 3
+      margin-top: auto
       font-size: 15px
       text-decoration: none
       color: mishka-color('content-text', $text-colors)
 
-@media (min-width: $desktop-widths)
+@media (min-width: $desktop-width)
   .main-nav
     background-color: transparent
     &__lists
@@ -129,5 +132,9 @@
       &:not(:last-of-type)
         margin-right: 57px
     &__link
-      margin: 0
-      margin-top: 18px
+      display: inline-block
+      order: 3
+      margin-top: auto
+      font-size: 15px
+      text-decoration: none
+      color: mishka-color('content-text', $text-colors)

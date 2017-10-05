@@ -1,7 +1,129 @@
 .reviews
+  margin-top: 59px
+  padding-bottom: 50px
   &__container
     @include container()
+    display: flex
+    flex-direction: column
+  &__title
+    font-size: 25px
+    color: mishka-color('text-dark', $text-colors)
+    margin: 0
+    margin-bottom: 27px
+  &__item
+    display: flex
+    flex-direction: column
+    flex-basis: 100%
+  &__text
+    margin: 0
+    font-size: 15px
+    line-height: 30px
+    margin-bottom: 26px
+    color: mishka-color('content-text', $text-colors)
+  &__author
+    display: flex
+    flex-direction: column
+    margin-bottom: 33px
+  &__author-name
+    font-size: 18px
+    line-height: 24px
+    font-weight: bold
+    font-style: normal
+    color: mishka-color('text-dark', $text-colors)
+  &__author-mail
+    font-size: 18px
+    line-height: 30px
+    color: mishka-color('content-text', $text-colors)
+  &__write
+    text-align: center
+    text-decoration: none
+  &__control
+    display: flex
+    justify-content: space-between
+    margin-bottom: 38px
+  &__toggle
+     border: 1px solid mishka-color('decorative-line')
+     background-color: transparent
+     flex-basis: 50%
+     height: 52px
+     &--prev
+      border-right: none
 
-// @media (min-width: $tablet-widths)
+@media (min-width: $tablet-width)
+  .reviews
+    background-image: url('../img/review@1x.jpg')
+    background-repeat: no-repeat
+    background-position-x: 0px
+    margin-top: 28px
+    padding-bottom: 85px
+    &__container
+      flex-direction: row
+      flex-wrap: wrap
+      padding-top: 77px
+    &__title
+      font-size: 43px
+      line-height: 50px
+      color: mishka-color('text-dark', $text-colors)
+      margin-left: -5px
+      margin-bottom: 0
+    &__lists
+      flex-basis: 100%
+      order: 1
+      margin-top: 44px
+      padding-bottom: 12px
+    &__write
+      margin-left: auto
+      margin-top: 2px
+      padding-left: 36px
+      padding-right: 40px
+    &__item
+      flex-direction: row
+      flex-wrap: wrap
+    &__text
+      font-size: 17px
+      line-height: 30px
+      color: mishka-color('content-text', $text-colors)
+      margin-bottom: 60px
+    &__control
+      margin-left: auto
+    &__toggle
+      border: none
+    &__author-name
+      font-size: 17px
+    &__author-mail
+      font-size: 18px
 
-// @media (min-width: $desktop-widths)
+@media (min-width: $desktop-width)
+  .reviews
+    background-image: url('../img/review@1x.jpg')
+    background-repeat: no-repeat
+    background-position-x: 50px
+    margin-top: 35px
+    &__container
+      flex-direction: row
+      flex-wrap: wrap
+      padding-left: 176px
+      padding-right: 0
+      box-sizing: border-box
+    &__title
+      font-size: 53px
+      line-height: 57px
+      margin-top: -7px
+    &__lists
+      flex-basis: 100%
+      order: 1
+      padding-bottom: 62px
+    &__write
+      margin-left: auto
+    &__item
+      flex-direction: row
+      flex-wrap: wrap
+    &__control
+      margin-left: auto
+    &__text
+      font-size: 17px
+      line-height: 30px
+      width: 90%
+      margin-bottom: 40px
+    &__author-name
+      margin-bottom: 2px
