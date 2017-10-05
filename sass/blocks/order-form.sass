@@ -267,4 +267,47 @@
       margin: 0
       margin-top: 9px
       letter-spacing: -0.9px
-// @media (min-width: $desktop-width)
+
+
+@media (min-width: $desktop-width)
+  .order-form
+    padding-bottom: 98px
+    &__introduction
+      padding-left: 175px
+      padding-right: 150px
+    &__block
+      padding-left: 64px
+      &--colour
+        padding-bottom: 43px
+        margin-bottom: 4px
+        .order-form__field
+          flex-basis: 28%
+        .order-form__block-wrapper
+          width: 90%
+          margin-left: 67px
+      &--user
+        align-items: baseline
+        .order-form__field
+          width: 80%
+      &--contacts
+        .order-form__field
+          justify-content: flex-start
+        .order-form__block-title
+          width: 10.5%
+        .order-form__text-input
+          flex-basis: 65%
+      &--note
+        justify-content: flex-start
+        .order-form__block-title
+          width: 11.3%
+        .order-form__textarea
+          width: 71%
+    &__block-wrapper
+      width: 89%
+      margin-left: 71px
+    &__action
+      padding-left: 175px
+      padding-right: 175px
+      margin-top: 90px
+    &__submit
+      width: 33%
