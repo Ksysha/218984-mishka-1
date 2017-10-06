@@ -4,27 +4,52 @@
   flex-wrap: wrap
   justify-content: space-between
   background-color: white
-  &--closed
-    display: none
+  height: 78px
   &__toggle
     cursor: pointer
     position: absolute
     top: 0
     right: 0
-    button
-      border: none
-      padding: 0
-      margin: 0
-      &:focus
-        outline: none
+    border: none
+    padding: 0
+    margin: 0
+    width: 20px
+    height: 14px
+    background-color: transparent
+    &:focus
+      outline: none
+  &--closed
+    .main-nav__toggle::before
+      @include pseudo(20px, 14px)
+      background-image: url('../img/icon-menu-open.svg')
+      right: 31px
+      top: 32px
+  &--opened
+    .main-nav__toggle::before
+      @include pseudo(21px, 21px)
+      background-image: url('../img/icon-menu-close.svg')
+      right: 31px
+      top: 32px
+  &--nojs
+    height: auto
+    .main-nav__toggle
+      display: none
+    .main-nav__lists,
+    .main-nav__user-lists
+      position: static
+      min-height: 0
+      display: block
   li:not(.main-nav__toggle)
     border-bottom: 1px solid mishka-color('decorative-line')
   &__lists,
   &__user-lists
+    background-color: white
     width: 100%
     list-style-type: none
     margin: 0
     padding: 0
+    &--closed
+      display: none
   &__item,
   &__user-item
     width: 100%
@@ -49,6 +74,7 @@
 
 @media (min-width: $tablet-width)
   .main-nav
+    background-color: transparent
     @include container()
     width: auto
     margin: 0
@@ -60,6 +86,8 @@
       width: 49%
       order: 2
       margin-top: 16px
+      z-index: 100
+      background-color: transparent
       a
         padding: 0
         font-size: 15px
@@ -69,6 +97,7 @@
       text-align: right
       padding-top: 33px
       padding-bottom: 33px
+      background-color: transparent
       a
         padding: 0
     &__item
@@ -89,6 +118,7 @@
       font-size: 15px
       text-decoration: none
       color: mishka-color('content-text', $text-colors)
+      z-index: 100
 
 @media (min-width: $desktop-width)
   .main-nav
