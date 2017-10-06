@@ -2,6 +2,9 @@
 @import "mixins.sass"
 @import "functions.sass"
 
+@import 'global/fonts.sass'
+@import 'global/global.sass'
+
 @import "blocks/btn.sass"
 @import "blocks/page-header.sass"
 @import "blocks/page-main.sass"
@@ -18,30 +21,3 @@
 @import "blocks/order-form.sass"
 @import "blocks/details.sass"
 @import "blocks/social-links.sass"
-
-
-// в какой файл запихнуть эти стили?
-body
-  font-size: 17px
-  line-height: 24px
-  font-family: Open Sans, sans-serif
-  color: #444444
-  font-style: normal
-  min-width: 320px
-  margin: 0
-  padding: 0
-
-img
-  max-width: 100%
-  height: auto
-
-// обязательно ли мне этот класс? (мне проще display: none)
-.visually-hidden
-  position: absolute
-  overflow: hidden
-  clip: rect(0 0 0 0)
-  height: 1px
-  width: 1px
-  margin: -1px
-  padding: 0
-  border: 0

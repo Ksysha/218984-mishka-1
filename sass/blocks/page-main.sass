@@ -63,6 +63,12 @@
         background-position-x: center
         background-position-y: -16px
         margin-bottom: 47px
+        position: relative
+        &::after
+          @include pseudo(768px, 24px)
+          background-image: url('../img/zigzag-fill-desktop.png')
+          background-repeat: repeat-x
+          bottom: -14px
       &--form
         margin-bottom: 53px
     &__title

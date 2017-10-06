@@ -10,16 +10,16 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav">
-        <button type="button" class="main-nav__toggle">Открыть меню</button>
+      <nav class="main-nav  main-nav--nojs">
+        <button type="button" class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
         <div class="page-header__logo">
-          <img src="../img/logo-mobile.svg" alt="лого-хэдер">
+          <img src="../img/logo-mobile.svg" alt="лого-хэдер" width="86px" height="35px">
         </div>
-        <ul class="main-nav__lists  main-nav--closed">
+        <ul class="main-nav__lists  main-nav__lists--closed">
           <li class="main-nav__item  main-nav__catalog"><a href="catalog.html">Каталог товаров</a></li>
           <li class="main-nav__item  main-nav__order"><a href="form.html">Вязание на заказ</a></li>
         </ul>
-        <ul class="main-nav__user-lists  main-nav--closed">
+        <ul class="main-nav__user-lists  main-nav__user-lists--closed">
           <li class="main-nav__user-item  main-nav__search"><a href="#">Поиск по сайту</a></li>
           <li class="main-nav__user-item  main-nav__basket  main-nav__basket--empty"><a href="#">Корзина: пока пуста</a></li>
         </ul>
@@ -157,5 +157,6 @@
       </div>
     </footer>
     <script src="js/main.js" charset="utf-8"></script>
+
   </body>
 </html>
