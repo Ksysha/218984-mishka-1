@@ -1,0 +1,47 @@
+.addition-form
+  @include container()
+  position: absolute
+  z-index: 20
+  top: 50%
+  left: 50%
+  width: 100%
+
+  display: none
+
+  box-sizing: border-box
+  padding-top: 35px
+  padding-bottom: 27px
+
+
+  transform: translateX(-50%) translateY(-50%)
+  animation: bounce .6s
+  background-color: white
+  box-shadow: 0px 22px 57px -15px rgba(0, 0, 0, .25)
+  border: 1px solid #c6c6c6
+  &__title
+    font-size: 25px
+    line-height: 30px
+    color: mishka-color('text-dark', $text-colors)
+    font-weight: bold
+    text-align: center
+    margin: 0
+    text-transform: uppercase
+  &__field-title
+    font-size: 15px
+    line-height: 30px
+    color: mishka-color('content-text', $text-colors)
+    display: block
+    text-align: center
+    margin: 0
+  &__radio
+    display: none
+  &__label
+    font-size: 17px
+    line-height: 16px
+    text-decoration: uppercase
+    font-weight: bold
+    color: mishka-color('content-text', $text-colors)
+    display: inline-block
+    border: 2px solid mishka-color('decorative-line')
+    height: 48px
+    width: 78px

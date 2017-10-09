@@ -1,6 +1,7 @@
 .page-header
   &__logo
-    width: 100%
+    margin-left: auto
+    margin-right: auto
     border-bottom: 1px solid mishka-color('decorative-line')
     min-height: 79px
     display: flex
@@ -8,20 +9,39 @@
     align-items: center
     cursor: pointer
 
+a.page-header__logo
+  &:hover
+    opacity: 0.6
+  &:active
+    opacity: 0.3
+
 @media (min-width: $tablet-width)
   .page-header
     height: 88px
     border-bottom: 1px solid mishka-color('decorative-line')
     &__logo
-      padding-top: 23px
+      padding-top: 28px
+      margin-left: -2px
       padding-bottom: 21px
       box-sizing: border-box
       width: 113px
       height: 88px
       border: none
+      img
+        width: 113px
+        height: 88px
 
 @media (min-width: $desktop-width)
   .page-header
     border-bottom: 1px solid mishka-color('decorative-line')
     &__logo
       order: 1
+      width: 149px
+      height: 72px
+      flex-basis: 28%
+      img
+        width: 149px
+        height: 72px
+        position: relative
+        bottom: -5px
+        right: 32px
