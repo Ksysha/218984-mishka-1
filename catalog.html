@@ -13,15 +13,25 @@
       <nav class="main-nav">
         <button type="button" class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
         <a href="index.html" class="page-header__logo">
-          <img src="../img/logo-mobile.svg" alt="лого-хэдер">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка Лого">
+          </picture>
         </a>
         <ul class="main-nav__lists  main-nav--closed">
           <li class="main-nav__item  main-nav__catalog"><a href="catalog.html">Каталог товаров</a></li>
           <li class="main-nav__item  main-nav__order"><a href="form.html">Вязание на заказ</a></li>
         </ul>
-        <ul class="main-nav__user-lists  main-nav--closed">
-          <li class="main-nav__user-item  main-nav__search"><a href="#">Поиск по сайту</a></li>
-          <li class="main-nav__user-item  main-nav__basket  main-nav__basket--empty"><a href="#">Корзина: пока пуста</a></li>
+        <ul class="main-nav__user-lists  main-nav__user-lists--closed">
+          <li class="main-nav__user-item  main-nav__search">
+            <a href="#">
+              <svg class="main-nav__search-icon" xmlns="http://www.w3.org/2000/svg" width="17.6" height="17.6" viewBox="-0.8 -0.8 17.6 17.6"><path fill="#231F20" d="M16.47 14.93l-3.415-3.415c.965-1.29 1.545-2.88 1.545-4.616 0-4.254-3.447-7.7-7.7-7.7S-.8 2.646-.8 6.9s3.446 7.7 7.7 7.7c1.733 0 3.325-.58 4.612-1.547l3.417 3.416c.202.2.417.33.77.33.607 0 1.1-.493 1.1-1.1 0-.24-.06-.5-.33-.77zM1.4 6.9c0-3.04 2.46-5.5 5.5-5.5s5.5 2.46 5.5 5.5-2.463 5.5-5.5 5.5-5.5-2.462-5.5-5.5z"/></svg>
+            Поиск по сайту</a></li>
+          <li class="main-nav__user-item  main-nav__basket  main-nav__basket--empty">
+            <a href="#">
+              <svg class="main-nav__basket-icon" xmlns="http://www.w3.org/2000/svg" width="20.294" height="18.849" viewBox="264.205 370.961 20.294 18.849"><path fill="#231F20" d="M283.75 378.19h-3.15l-3.408-6.814c-.185-.37-.634-.52-1.006-.335-.37.187-.52.637-.335 1.007l3.072 6.143h-9.138l3.072-6.143c.185-.37.035-.82-.335-1.006-.37-.184-.82-.034-1.005.336l-3.407 6.814h-3.15c-.415 0-.75.336-.75.75s.335.75.75.75h.156l.855 2.99c-.188.138-.317.348-.317.596 0 .396.31.71.697.74l1.656 5.794h12.697l1.656-5.795c.387-.028.697-.344.697-.74 0-.248-.13-.458-.316-.595l.855-2.99h.157c.414 0 .75-.337.75-.75s-.338-.75-.752-.75zm-4.18 10.12h-10.434l-1.224-4.283h12.88l-1.223 4.284zm1.652-5.784h-13.74l-.81-2.836h15.36l-.81 2.836z"/></svg>
+            Корзина: пока пуста</a></li>
         </ul>
         <ul class="main-nav__promo-lists">
           <li class="main-nav__promo-item"><a href="#">Новые поступления</a></li>
@@ -37,7 +47,13 @@
       <div class="page-main__container">
         <section class="catalog">
           <article class="catalog__item  product">
-            <a href="product.html" class="product__img"><img src="../img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="фото товара"></a>
+            <a href="product.html" class="product__img">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
+                <img src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" width="260" height="195" alt="фото товара">
+              </picture>
+            </a>
             <div class="product__information">
               <div class="product__details">
                 <a class="product__link" href="product.html"><h2 class="product__title">Зайчик-попрыгайчик</h2></a>
@@ -51,7 +67,13 @@
             </div>
           </article>
           <article class="catalog__item  product">
-            <a href="product.html" class="product__img"><img src="../img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="фото товара"></a>
+            <a href="product.html" class="product__img">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
+                <img src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" width="260" height="195" alt="фото товара">
+              </picture>
+            </a>
             <div class="product__information">
               <div class="product__details">
                 <a class="product__link" href="product.html"><h2 class="product__title">Корзинка для белья</h2></a>
@@ -64,7 +86,13 @@
             </div>
           </article>
           <article class="catalog__item  product">
-            <a href="product.html" class="product__img"><img src="../img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="фото товара"></a>
+            <a href="product.html" class="product__img">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
+                <img src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" width="260" height="195" alt="фото товара">
+              </picture>
+            </a>
             <div class="product__information">
               <div class="product__details">
                 <a class="product__link" href="product.html"><h2 class="product__title">Большая корзинка для&nbsp;игрушек</h2></a>
@@ -100,7 +128,11 @@
             <h3 class="details__title">Процесс производства</h3>
           </div>
           <div class="details__video">
-            <img src="http://placehold.it/260x150" alt="видео">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+              <img class="details__video-img" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="260" height="150" alt="видео производства">
+            </picture>
           </div>
           <div class="details__main">
             <p class="details__desc">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
@@ -134,5 +166,6 @@
       </div>
     </footer>
     <script src="js/main.js" charset="utf-8"></script>
+    <script src="js/picturefill.js"></script>
   </body>
 </html>

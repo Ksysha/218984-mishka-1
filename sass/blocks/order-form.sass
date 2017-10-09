@@ -76,6 +76,7 @@
   &__label-checkbox
     padding-left: 62px
     position: relative
+    cursor: pointer
   &__label-radio
     padding-top: 16px
     &::before
@@ -87,6 +88,12 @@
       box-shadow: 0 0 0 2px mishka-color('content-text', $text-colors)
       left: 2px
       top: 2px
+    &:hover
+      &::before
+        box-shadow: 0 0 0 2px mishka-color('primary')
+    &:active
+      &::before
+        box-shadow: 0 0 0 2px mishka-color-down('content-text', $text-colors)
   &__field
     &:first-of-type
       .order-form__label-radio::before
@@ -110,12 +117,20 @@
       box-shadow: 0 0 0 2px mishka-color('content-text', $text-colors)
       left: 2px
       top: 7px
-
+    &:hover
+      &::before
+        box-shadow: 0 0 0 2px mishka-color('primary')
+    &:active
+      &::before
+        box-shadow: 0 0 0 2px mishka-color-down('content-text', $text-colors)
   ::-webkit-input-placeholder
       color: mishka-color-down('content-text', $text-colors)
       font-size: 17px
       line-height: 18px
   &__text-input
+    color: mishka-color('text-dark', $text-colors)
+    font-size: 17px
+    line-height: 18px
     border: none
     border-bottom: 2px solid mishka-color('text-dark', $text-colors)
     padding-top: 15px
@@ -125,6 +140,11 @@
     background-color: transparent
     &:focus
       outline: none
+      border-bottom: 2px solid mishka-color('primary')
+    &:hover
+      border-bottom: 2px solid mishka-color('primary')
+    &--error
+      border-bottom: 2px solid mishka-color('input-error', $additional-colors)
   &__textarea
     border: 2px solid mishka-color('text-dark', $text-colors)
     padding-top: 15px
@@ -133,8 +153,14 @@
     height: 142px
     width: 100%
     box-sizing: border-box
+    cursor: pointer
     &:focus
       outline: none
+      border: 2px solid mishka-color('primary')
+    &:hover
+      border: 2px solid mishka-color('primary')
+    &--error
+      border-bottom: 2px solid mishka-color('input-error', $additional-colors)
   &__postscript
     font-size: 14px
     color: mishka-color('content-text', $text-colors)
@@ -250,6 +276,8 @@
     &__text-input
       padding-bottom: 15px
       padding-left: 17px
+      font-size: 19px
+      line-height: 18px
     ::-webkit-input-placeholder
       font-size: 19px
       line-height: 18px

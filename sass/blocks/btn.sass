@@ -10,3 +10,12 @@
   padding-top: 16px
   font-weight: bold
   display: block
+  cursor: pointer
+  &:hover
+    background-color: mishka-color('content-text', $text-colors)
+    color: mishka-color('text-light', $text-colors)
+  &:active
+    background-color: mishka-color('content-text', $text-colors)
+    color: mishka-color-down('text-light', $text-colors)
+  &:focus
+    outline: none
