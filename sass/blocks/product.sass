@@ -19,9 +19,16 @@
     color: mishka-color('text-dark', $text-colors)
     font-weight: bold
     margin-bottom: 5px
+
   &__link
     display: block
     text-decoration: none
+    &:hover
+      .product__title
+        color: mishka-color-hover('text-dark', $text-colors)
+    &:active
+      .product__title
+        color: mishka-color-down('text-dark', $text-colors)
   &__details
     padding-bottom: 20px
   &__purchase
@@ -29,6 +36,17 @@
     display: flex
     justify-content: space-between
     padding-top: 21px
+    cursor: pointer
+    &:hover
+      .product__price
+        color: mishka-color-hover('text-dark', $text-colors)
+      .product__icon-cart
+        fill: mishka-color('primary')
+    &:active
+      .product__price
+        color: mishka-color-down('text-dark', $text-colors)
+      .product__icon-cart
+        fill: mishka-color-hover('primary')
   &__options
     font-size: 13px
     line-height: 30px
@@ -40,7 +58,11 @@
     font-size: 15px
     line-height: 24px
   &__buy
-    text-indent: -100000px
+    //text-indent: -100000px
+
+  &__icon-cart
+    fill: mishka-color-down('text-dark', $text-colors)
+
   &__img
     width: auto
     height: 100%
