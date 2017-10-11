@@ -1,10 +1,11 @@
 .reviews
   margin-top: 59px
   padding-bottom: 50px
-  &__big-zigzag-line
-    fill: mishka-color('background-secondary')
+  &::after
+    @include pseudo(100%, 7px)
+    background-image: url('../img/zigzag-line-mobile.png')
     width: 100%
-    //margin-top: 44px
+    margin-top: 44px
   &__container
     @include container()
     display: flex
@@ -52,6 +53,9 @@
     flex-basis: 50%
     height: 52px
     cursor: pointer
+    span
+      display: block
+      text-indent: -1000000px
     &:focus
       outline: none
     &--prev
@@ -82,6 +86,10 @@
       background-image: url('../img/review@2x.jpg')
       background-size: 350px auto
 
+    &::after
+      background-image: url('../img/zigzag-line-tablet.png')
+      height: 17px
+      margin-top: 63px
     &__container
       flex-direction: row
       flex-wrap: wrap
@@ -127,6 +135,10 @@
     background-repeat: no-repeat
     background-position-x: 50px
     margin-top: 35px
+    &::after
+      background-image: url('../img/zigzag-line-desktop.png')
+      height: 23px
+      margin-top: 60px
     &__container
       flex-direction: row
       flex-wrap: wrap

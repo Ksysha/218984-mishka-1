@@ -4,7 +4,7 @@
   margin-bottom: 30px
   &::after
     @include pseudo(100%, 7px)
-    background-image: url('../img/zigzag-line-desktop.png')
+    background-image: url('../img/zigzag-line-mobile.png')
     background-position-x: 8px
     bottom: 0
   &__container
@@ -63,6 +63,11 @@
 @media (min-width: $tablet-width)
   .promo-goods
     margin-bottom: 50px
+    padding-bottom: 44px
+    &::after
+      background-image: url('../img/zigzag-line-tablet.png')
+      height: 17px
+      background-position-x: 1px
     &__header
       margin-left: -3px
       margin-top: 47px
@@ -107,6 +112,10 @@
 @media (min-width: $desktop-width)
   .promo-goods
     margin-bottom: 62px
+    &::after
+      background-image: url('../img/zigzag-line-desktop.png')
+      height: 23px
+      bottom: -28px
     &__header
       flex-direction: row-reverse
       justify-content: flex-end

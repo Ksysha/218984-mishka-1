@@ -1,34 +1,52 @@
 .page-footer
   background-color: mishka-color('background-secondary')
-  padding-top: 26px
+  padding-top: 4px
   &__container
     @include container()
     display: flex
     flex-direction: column
   &__logo
     display: none
+    cursor: pointer
+    &:hover
+      .page-footer__logo-footer
+        fill: mishka-color('primary')
+    &:active
+      .page-footer__logo-footer
+        fill: mishka-color-down('primary')
   &__social
      border-bottom: 1px solid #e5e5e5
      padding-bottom: 27px
   &__copyright
     margin: 0 auto
-    margin-top: 20px
+    margin-top: 18px
     margin-bottom: 23px
     text-decoration: none
     display: flex
     align-items: center
+    cursor: pointer
     span
     font-size: 19px
     line-height: 18px
     color: mishka-color('text-dark', $text-colors)
     font-weight: bold
     letter-spacing: 0.5px
+    &:hover
+      span
+        color: mishka-color-hover('text-dark', $text-colors)
+      .page-footer__htmlacademy-logo
+        fill: mishka-color('primary')
+    &:active
+      span
+        color: mishka-color-down('text-dark', $text-colors)
+      .page-footer__htmlacademy-logo
+        fill: mishka-color-down('primary')
   &__htmlacademy-logo
-    margin-left: 18px
-
+    margin-left: 24px
+    fill: mishka-color('text-dark', $text-colors)
 @media (min-width: $tablet-width)
   .page-footer
-    padding-top: 50px
+    padding-top: 44px
     padding-bottom: 58px
     &__container
       flex-direction: row
@@ -37,14 +55,22 @@
     &__social
       border-bottom: none
       padding-bottom: 0
+      margin-left: 77px
     &__logo
       display: inline-block
       width: 102px
       height: 34px
-      img
-        width: inherit
+    &__logo-footer
+      width: inherit
     &__copyright
       margin: 0
+      margin-top: 10px
     &__htmlacademy-logo
       margin-left: 25px
-// @media (min-width: $desktop-width)
+@media (min-width: $desktop-width)
+  .page-footer
+    padding-top: 48px
+    &__social
+      margin-left: 78px
+    &__copyright
+      margin-top: 8px
