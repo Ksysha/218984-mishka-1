@@ -1,6 +1,10 @@
 .reviews
   margin-top: 59px
   padding-bottom: 50px
+  &__big-zigzag-line
+    fill: mishka-color('background-secondary')
+    width: 100%
+    //margin-top: 44px
   &__container
     @include container()
     display: flex
@@ -23,13 +27,14 @@
   &__author
     display: flex
     flex-direction: column
-    margin-bottom: 33px
+    margin-bottom: 31px
   &__author-name
     font-size: 18px
     line-height: 24px
     font-weight: bold
     font-style: normal
     color: mishka-color('text-dark', $text-colors)
+    margin-bottom: 2px
   &__author-mail
     font-size: 18px
     line-height: 30px
@@ -42,12 +47,28 @@
     justify-content: space-between
     margin-bottom: 38px
   &__toggle
-     border: 1px solid mishka-color('decorative-line')
-     background-color: transparent
-     flex-basis: 50%
-     height: 52px
-     &--prev
+    border: 1px solid mishka-color('decorative-line')
+    background-color: transparent
+    flex-basis: 50%
+    height: 52px
+    cursor: pointer
+    &:focus
+      outline: none
+    &--prev
       border-right: none
+      &:hover
+        .reviews__icon-left-arrow
+          fill: mishka-color-hover('text-dark', $text-colors)
+      &:active
+        .reviews__icon-left-arrow
+          fill: mishka-color-down('text-dark', $text-colors)
+    &--next
+      &:hover
+        .reviews__icon-right-arrow
+          fill: mishka-color-hover('text-dark', $text-colors)
+      &:active
+        .reviews__icon-right-arrow
+          fill: mishka-color-down('text-dark', $text-colors)
 
 @media (min-width: $tablet-width)
   .reviews
@@ -93,6 +114,8 @@
       margin-left: auto
     &__toggle
       border: none
+      margin-top: 5px
+      width: 88px
     &__author-name
       font-size: 17px
     &__author-mail
