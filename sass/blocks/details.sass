@@ -21,11 +21,14 @@
     height: 150px
     box-sizing: border-box
     margin-bottom: 27px
+    position: relative
   &__desc
     font-size: 13px
     line-height: 24px
     margin: 0
-    margin-bottom: 25px
+    margin-bottom: 28px
+    overflow: hidden
+    height: 117px
   &__main
     box-sizing: border-box
     padding-left: 33px
@@ -33,6 +36,27 @@
   &__btn
     padding-left: 23px
     text-decoration: none
+  &__button-play
+    span
+      text-indent: -100000px
+      display: block
+    position: absolute
+    background-image: url('../img/icon-play.svg')
+    background-repeat: no-repeat
+    background-size: cover
+    width: 102px
+    height: 78px
+    top: 50%
+    left: 50%
+    transform: translateX(-50%) translateY(-50%)
+    cursor: pointer
+    &:hover
+      width: 124px
+      height: 93px
+    &:active
+      width: 81px
+      height: 62px
+      opacity: 0.6
 
 @media (min-width: $tablet-width)
   .details
@@ -52,6 +76,7 @@
       font-size: 15px
       line-height: 30px
       margin-bottom: 35px
+      height: 60px
     &__headline
       order: 2
       padding-left: 105px
@@ -96,3 +121,4 @@
       width: 22%
     &__desc
       margin-bottom: 47px
+      height: 119px

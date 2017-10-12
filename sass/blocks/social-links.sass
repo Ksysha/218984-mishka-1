@@ -4,6 +4,13 @@
   padding: 0
   display: flex
   justify-content: center
+  &__icon-insta
+    fill: mishka-color('text-dark', $text-colors)
+  &__icon-twitter
+    fill: mishka-color('text-dark', $text-colors)
+  &__icon-fb
+    fill: mishka-color('text-dark', $text-colors)
+
   &__item
     &:not(:last-of-type)
       margin-right: 40px
@@ -13,17 +20,45 @@
     svg
       display: inline-block
       vertical-align: middle
+    span
+      display: block
+      text-indent: -10000000px
     &--insta
       a
         width: 22px
         height: 22px
+      &:hover
+        .social-links__icon-insta
+          fill: mishka-color('primary')
+      &:active
+        .social-links__icon-insta
+          fill: mishka-color-down('primary')
     &--twitter
       a
         width: 24px
         height: 20px
+      &:hover
+        .social-links__icon-twitter
+          fill: mishka-color('primary')
+      &:active
+        .social-links__icon-twitter
+          fill: mishka-color-down('primary')
     &--fb
       a
         width: 15px
         height: 28px
-  &__icon-insta
-    fill: mishka-color('text-dark', $text-colors)
+      &:hover
+        .social-links__icon-fb
+            fill: mishka-color('primary')
+      &:active
+        .social-links__icon-fb
+            fill: mishka-color-down('primary')
+@media (min-width: $tablet-width)
+  .social-links
+    &__item
+      margin-top: -10px
+
+@media (min-width: $desktop-width)
+  .social-links
+    &__item
+      margin-top: -10px

@@ -1,6 +1,17 @@
 .order-form
   padding-top: 10px
   padding-bottom: 55px
+  &__icon-phone
+    fill: #cccccc
+    position: absolute
+    top: 36px
+    right: 8px
+  &__icon-mail
+    fill: #cccccc
+    position: absolute
+    top: 36px
+    right: 4px
+
   &__container
     @include container()
     &--flex
@@ -43,6 +54,7 @@
 
   &__field
     margin-bottom: 14px
+    position: relative
   &__block-title
     font-size: 17px
     line-height: 16px
@@ -134,15 +146,23 @@
     border: none
     border-bottom: 2px solid mishka-color('text-dark', $text-colors)
     padding-top: 15px
-    padding-bottom: 16px
+    padding-bottom: 17px
     width: 100%
     margin-bottom: 8px
     background-color: transparent
     &:focus
       outline: none
       border-bottom: 2px solid mishka-color('primary')
+      .order-form__icon-phone
+        fill: mishka-color('primary')
+      .order-form__icon-mail
+        fill: mishka-color('primary')
     &:hover
       border-bottom: 2px solid mishka-color('primary')
+      + .order-form__icon-phone
+        fill: mishka-color('primary')
+      + .order-form__icon-mail
+        fill: mishka-color('primary')
     &--error
       border-bottom: 2px solid mishka-color('input-error', $additional-colors)
   &__textarea
@@ -171,11 +191,18 @@
     margin-top: 6px
     margin-left: -3px
     margin-right: -5px
-    margin-bottom: 18px
+    margin-bottom: 19px
   &__submit
     width: 100%
 @media (min-width: $tablet-width)
   .order-form
+    &__icon-phone
+      top: 13px
+      right: 25px
+    &__icon-phone
+      top: 13px
+      right: 22px
+
     &__label-radio,
     &__label-checkbox,
     &__label
@@ -207,20 +234,21 @@
         .order-form__field
           flex-basis: 50%
       &--user
-        padding-top: 48px
+        align-items: baseline
+        padding-top: 45px
         padding-bottom: 55px
         .order-form__field
           display: flex
           align-items: baseline
-          margin-bottom: 17px
+          margin-bottom: 14px
       &--contacts
-        padding-top: 54px
+        padding-top: 51px
         padding-bottom: 56px
         .order-form__field
           display: flex
           align-items: baseline
           justify-content: space-between
-          margin-bottom: 17px
+          margin-bottom: 14px
         .order-form__text-input
           flex-basis: 72.3%
       &--note
@@ -303,6 +331,12 @@
 @media (min-width: $desktop-width)
   .order-form
     padding-bottom: 98px
+
+    &__icon-phone
+      right: 247px
+    &__icon-mail
+      top: 13px
+      right: 243px
     &__introduction
       padding-left: 175px
       padding-right: 150px
