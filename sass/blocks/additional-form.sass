@@ -1,4 +1,5 @@
 .addition-form
+  z-index: 100000
   @include container()
   position: absolute
   z-index: 20
@@ -9,7 +10,7 @@
   display: none
 
   box-sizing: border-box
-  padding-top: 35px
+  padding-top: 30px
   padding-bottom: 27px
 
 
@@ -24,8 +25,12 @@
     color: mishka-color('text-dark', $text-colors)
     font-weight: bold
     text-align: center
-    margin: 0
+    margin: 0 auto
     text-transform: uppercase
+    width: 60%
+    margin-bottom: 12px
+  &__field
+    margin-bottom: 31px
   &__field-title
     font-size: 15px
     line-height: 30px
@@ -33,15 +38,64 @@
     display: block
     text-align: center
     margin: 0
+    margin-bottom: 23px
   &__radio
     display: none
+    &:checked
+      + label
+        border: 2px solid mishka-color('primary')
   &__label
     font-size: 17px
     line-height: 16px
-    text-decoration: uppercase
+    text-transform: uppercase
     font-weight: bold
     color: mishka-color('content-text', $text-colors)
     display: inline-block
     border: 2px solid mishka-color('decorative-line')
-    height: 48px
-    width: 78px
+    width: 79px
+    text-align: center
+    padding-top: 17px
+    padding-bottom: 15px
+    box-sizing: border-box
+    margin-right: 6px
+    cursor: pointer
+    &:last-of-type
+      margin-right: 0
+
+    &:hover
+      border: 2px solid mishka-color('primary')
+  &__submit
+    border: none
+    background-color: mishka-color('primary')
+    padding-top: 18px
+    padding-bottom: 18px
+    line-height: 16px
+    width: 100%
+    cursor: pointer
+
+
+@media (min-width: $tablet-width)
+  .addition-form
+    width: 73.8%
+    text-align: center
+    padding-top: 34px
+    padding-bottom: 43px
+
+    &__title
+      font-size: 30px
+      line-height: 57px
+      width: 87%
+      margin-bottom: 15px
+    &__field-title
+      font-size: 17px
+      line-height: 30px
+    &__label
+      width: 109px
+    &__submit
+      margin: 0 auto
+      width: 75%
+
+
+@media (min-width: $desktop-width)
+  .addition-form
+    width: 42.8%
