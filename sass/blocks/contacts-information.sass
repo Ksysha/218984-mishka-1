@@ -26,6 +26,11 @@
     color: mishka-color('content-text', $text-colors)
     padding-bottom: 4px
     letter-spacing: 0.1px
+    &:hover
+      color: mishka-color('primary')
+    &:active
+      color: mishka-color-down('primary')
+      border-bottom: 1px solid mishka-color-down('primary')
 
 @media (min-width: $tablet-width)
   .contacts-information
