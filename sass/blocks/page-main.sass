@@ -40,28 +40,10 @@
     padding: 0
   &__product-group
     position: relative
-    //height: 123px
     &--group1
       background-color: mishka-color('primary')
-    &:hover
-
-      .page-main__icon-interior
-        fill: #29a592
-    &:active
-      a
-        opacity: 0.3
-      .page-main__icon-interior
-        fill: #44c0aa
     &--group2
-      background-color: mix(black, mishka-color('primary'), 7%) //#56c3b2
-      &:hover
-        .page-main__icon-toy
-          fill: #239f8e
-      &:active
-        a
-          opacity: 0.3
-        .page-main__icon-toy
-          fill: #37b2a0
+      background-color: #56c3b2
     a
       box-sizing: border-box
       display: inline-block
@@ -81,10 +63,10 @@
     bottom: 18px
     fill: #3bb09d
   &__icon-toy
-        position: absolute
-        fill: #35a999
-        right: 27px
-        bottom: 22px
+    position: absolute
+    fill: #35a999
+    right: 27px
+    bottom: 22px
 
 @media (min-width: $tablet-width)
   .page-main
@@ -131,6 +113,7 @@
         background-image: url('../img/zigzag-fill-tablet.png')
         background-repeat: repeat-x
         bottom: -14px
+        left: 0
     &__product-group
       display: inline-block
       width: 50%
@@ -154,6 +137,12 @@
 
 @media (min-width: $desktop-width)
   .page-main
+    &__icon-toy
+      right: 35px
+      bottom: 34px
+    &__icon-interior
+      right: 35px
+      bottom: 35px
     &__headline
       margin-bottom: 132px
       position: relative
@@ -163,6 +152,7 @@
         background-size: 1150px 746px // как поступать с картинками?!?!?!?
         margin-bottom: 45px
         background-image: url('../img/hero-desktop@1x.jpg')
+        overflow: hidden
 
         @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx)
             background-image: url("../img/hero-desktop@2x.jpg")
@@ -189,6 +179,30 @@
         bottom: -19px
         left: 0
     &__product-group
+      height: 123px
+      margin-bottom: -5px
       a
         padding-left: 7%
         padding-right: 93%
+      &--group1
+        &:hover
+          position: relative
+          top: -5px
+          .page-main__icon-interior
+            fill: #29a592
+        &:active
+          a
+            opacity: 0.3
+          .page-main__icon-interior
+            fill: #44c0aa
+      &--group2
+        &:hover
+          position: relative
+          top: -5px
+          .page-main__icon-toy
+            fill: #239f8e
+        &:active
+          a
+            opacity: 0.3
+          .page-main__icon-toy
+            fill: #37b2a0

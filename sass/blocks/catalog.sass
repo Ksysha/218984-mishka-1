@@ -1,10 +1,17 @@
 .catalog
-  margin-top: 30px
+  margin-top: 31px
   margin-bottom: 28px
   display: flex
   flex-direction: column
   &__modal
+    position: fixed
+    z-index: 10000
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
     display: none
+    background: rgba(255,255,255,.9)
 
 // @media (min-width: $tablet-width)
 @media (min-width: $desktop-width)
