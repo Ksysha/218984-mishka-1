@@ -6,6 +6,7 @@
   background-color: white
   height: 78px
   z-index: 10
+  border-bottom: 1px solid mishka-color('decorative-line')
   &__toggle
     cursor: pointer
     position: absolute
@@ -39,7 +40,9 @@
     .main-nav__user-lists
       position: static
       min-height: 0
-      display: block
+      //display: block
+      display: flex
+      flex-direction: column
   li:not(.main-nav__toggle)
     border-bottom: 1px solid mishka-color('decorative-line')
   &__lists,
@@ -134,23 +137,26 @@
     width: auto
     margin: 0
     background-color: transparent
+    border-bottom: none
     &__toggle
       display: none
     &__lists
-      display: inline-block
+      flex-direction: row
       width: 49%
       order: 2
       margin-top: 16px
       z-index: 100
       background-color: transparent
+      display: flex
       a
         padding: 0
         font-size: 15px
     &__user-lists
-      display: inline-block
+      flex-direction: row
       width: 52%
       text-align: right
       background-color: transparent
+      display: flex
       a
         padding: 0
     &__item
@@ -167,12 +173,7 @@
       border-left: 1px solid mishka-color('decorative-line')
       a
         font-size: 0
-        padding-top: 38px
-        padding-bottom: 27px
-        padding-left: 38px
-        padding-right: 38px
-    &__search-icon
-      top: 36px
+        width: 80px
     &__basket
       border-left: 1px solid mishka-color('decorative-line')
       a
@@ -198,12 +199,13 @@
       order: 0
       margin: 0
       font-size: 17px
-      display: inline-block
+      display: flex
       width: auto
     &__user-lists
       order: 3
-      display: inline-block
       width: auto
+      height: 89px
+      display: flex
     &__item
       padding-top: 31px
       padding-bottom: 33px
@@ -211,8 +213,12 @@
       a
         letter-spacing: 1.2px
       &:not(:last-of-type)
-        margin-right: 30px
+        margin-right: 34px
         border-right: 1px solid mishka-color('decorative-line')
+    &__search
+      width: 84px
+    &__search-icon
+      left: 28px
     &__promo-lists
       display: inline-block
       list-style-type: none

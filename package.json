@@ -14,6 +14,7 @@
     "gulp-rename": "1.2.x",
     "gulp-imagemin": "3.4.x",
     "gulp-webp": "2.3.x",
+    "gulp-jsmin": "0.1.x",
     "gulp-svgstore": "6.1.x",
     "gulp-posthtml": "3.0.x",
     "posthtml-include": "1.1.x",
