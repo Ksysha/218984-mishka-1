@@ -18,8 +18,6 @@
     width: 20px
     height: 14px
     background-color: transparent
-    &:focus
-      outline: none
   &--closed
     .main-nav__toggle::before
       @include pseudo(20px, 14px)
@@ -96,8 +94,9 @@
     fill: mishka-color-down('text-dark', $text-colors)
 
   &__search
+    position: relative
     a
-      position: relative
+
       color: mishka-color('text-dark', $text-colors)
       font-weight: bold
     &:hover
@@ -112,8 +111,10 @@
         fill: mishka-color-hover('primary')
   &__search-icon
     position: absolute
-    top: 30px
-    left: 32px
+    left: 50%
+    margin-left: -9px
+    top: 50%
+    margin-top: -9px
     width: 18px
     height: 19px
     fill: mishka-color-down('text-dark', $text-colors)
@@ -186,7 +187,7 @@
     &__link
       display: inline-block
       order: 3
-      margin-top: auto
+      margin-top: 18px
       font-size: 15px
       text-decoration: none
       color: mishka-color('content-text', $text-colors)
@@ -217,8 +218,6 @@
         border-right: 1px solid mishka-color('decorative-line')
     &__search
       width: 84px
-    &__search-icon
-      left: 28px
     &__promo-lists
       display: inline-block
       list-style-type: none
@@ -242,7 +241,7 @@
     &__link
       display: inline-block
       order: 3
-      margin-top: auto
+      margin-top: 18px
       font-size: 15px
       text-decoration: none
       color: mishka-color('content-text', $text-colors)
